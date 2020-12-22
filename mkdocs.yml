@@ -1,0 +1,82 @@
+site_name: 'Yncrea - Virtualization Course'
+
+# Repository
+repo_name: Labs solutions
+repo_url: https://github.com/omerlin/yncrea-virtualization-labs
+edit_uri: ""
+site_description: >-
+  This training material is part of <b> Virtualization Course</b> for <b>YNCREA Toulon.</b>
+  <br><br>
+  <i>The course takes place over three days and intends to give students
+  an understanding of virtualization technologies with a focus on containers (Docker) and orchestrators (Kubernetes).</i>
+
+nav:
+  - Home: index.md
+  - Day#1:
+    - Virtualization - Story and Concepts: story_of_virtualization.md
+    - Env - Prerequisites: prerequisites.md
+    - Virtualization - Virtual Box: virtualBox.md
+  - Day#2:
+    - Docker - Basics Lab: dockerBasics.md
+    - Kubernetes - first part: kubernetesIntroduction.md
+    - Kubernetes - second part: kubernetesBasics.md
+    - Cloud - Introduction to Cloud: cloudIntroduction.md
+    - Cloud - Google Cloud Platform: GoogleCloudPlatform.md
+  - Day#3:
+    - Kubernetes - Advanced: kubernetesAdvanced.md
+    - Evaluation - Quizz: quizz.md
+
+theme:
+  language: en
+  name: 'material'
+  logo: files/yncrea.png
+  favicon: files/yncrea.png
+  palette:
+    primary: blue
+    accent: blue
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - tabs
+    - instant
+  custom_dir: material
+
+markdown_extensions:
+  - codehilite:
+      linenums: true
+  - admonition
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tabbed
+  - pymdownx.tilde
+copyright: '&copy; 2021 Olivier Merlin'
+
+# Customization
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/omerlin
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/repository/docker/omerlin/srvquizz
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/olivier-merlin-90258a6/
+
+# Google Analytics
+google_analytics:
+  - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
+  - auto

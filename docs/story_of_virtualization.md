@@ -61,4 +61,74 @@ With this hypervisor parity, innovation became focused on the private/public clo
 application APIs. 
 This leads to new actors like Nutanix ant its HCI (Hyper Convergence Infrastructure) to emerge.
 
-Legacy server applications are slowly retiring to give way to elastic, self-defining cloud applications (although they will coexist side by side for some time). 
+Legacy server applications are slowly retiring to give way to elastic, self-defining cloud applications (although they will coexist side by side for some time).
+
+## Server and Desktop Virtualization
+
+{==Desktop Virtualization==} is a response to increasing numbers of employees working remotely and from multiple devices.
+
+{==Server virtualization==} is an answer for companies that need to diversify workloads and maximize server efficiency
+
+## Terminology
+
+Hardware Abstraction Layer
+
+Host Operating System
+
+Guest Operating System
+
+Partitioning, isolation, sharing of resources
+
+Images lifecycle
+
+Virtual Network
+
+## Hypervisors
+
+A hypervisor provides software to manage virtual machine access to the underlying hardware. The hypervisor creates, manages, and monitors virtual machines.
+There are 2 types: {==Type 1 (Bare metal)==} and {==Type 2 (Hosted)==}.
+Hypervisors come with Management Software that:
+
+* Controls the failover
+  
+* Authorize dynamic over-allocation of resources (Type 1 only, can specify static too)
+  
+* Manages the VMs lifecycle (start/stop)
+  
+* Manages the VMs images location (lift and shift)
+
+!!! note
+    The term **Lift and Shift** is used for migration from OnPremise Infrastructure to Cloud Infrastructure
+    Another approach is **Transform and Move**
+
+## Type 1 Hypervisor
+
+![HYPERT1](./files/virtualization/hypervisor_type1.png "Type 1 Hypervisor")
+
+!!! info
+    Citrix Xen Server (free), 
+    VMware vSphere (former VMware ESXi and VMware ESX), 
+    Microsoft Hyper-V Server, Parallels Server Bare Metal, Oracle vm server (free).
+
+## Type 2 Hypervisor
+
+![HYPERT2](./files/virtualization/hypervisor_type2.png "Type 2 Hypervisor")
+
+!!! info
+    Microsoft (Microsoft VirtualPC, Microsoft Virtual Server), 
+    Parallels (Parallels Desktop, Parallels Server), 
+    Oracle VM VirtualBox (free), 
+    VMware (VMware Fusion, VMware Player, VMware Server, VMware Workstation), 
+    free (QEMU : x86 emulator), 
+    KVM (free)
+
+## Containers
+
+![CONTAINERS](./files/virtualization/containers_archi.png "Containers architecture")
+
+!!! info
+    Linux-VServer (isolating processes into user spaces) ; 
+    chroot (isolating the change of root) ; 
+    BSD Jail ; 
+    LXC : free; 
+    Docker.

@@ -33,20 +33,18 @@ For people allergic to command prompt ( bad for automation from my point of view
 
 You need to install this list of software
 
-* Vagrant - to build and manage virtual machines easily
+* Vagrant - to build and manage virtual machines easily. This will "pilot" virtualbox. 
   
 * Oracle Virtualbox - the famous Type 2 hypervisor
 
 * (Windows only) Mobaxterm - a beautiful cygwin package toolbox - an alternative to putty
 
 ## Windows installation
-We do recommend also to install git.
+We do recommend also to install git, to clone source on your computer.
 
 ```bash
-   choco intall -y virtualbox mobaxterm vagrant git
+   choco intall -y mobaxterm vagrant git
 ```
 
-
-
-
-
+!!! Note
+    We advise installing virtualbox manually instead of using chocolatey

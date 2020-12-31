@@ -16,8 +16,9 @@ nav:
     - Virtualization - Story and Concepts: story_of_virtualization.md
     - Env - Prerequisites: prerequisites.md
     - Virtualization - Virtual Box: virtualBox.md
+    - Virtualization - Labs: virtualBoxLabs.md
+    - Docker - Basics Labs: dockerBasics.md
   - Day#2:
-    - Docker - Basics Lab: dockerBasics.md
     - Kubernetes - first part: kubernetesIntroduction.md
     - Kubernetes - second part: kubernetesBasics.md
     - Cloud - Introduction to Cloud: cloudIntroduction.md

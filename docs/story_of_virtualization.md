@@ -43,6 +43,7 @@ virtualization to new players.
 For more details on Xen and KVM: [Xen and KVM](https://blog.octo.com/presentation-des-hyperviseurs-xen-et-kvm/)
 
 Even Microsoft eventually got into the game with the release of Hyper-V in 2008. (Archi similar to Xen)
+
 ![TIMELINE2](./files/virtualization/timeline_virtualization2.png "Timeline part2")
 
 When virtualization essentially became free, or at least accessible without expensive licensing fees,

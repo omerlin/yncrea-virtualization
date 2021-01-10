@@ -1,4 +1,4 @@
 ---
 template: overrides/home.html
-title: Yncréa Cloud Computing
+title: Yncréa Virtualization course
 ---

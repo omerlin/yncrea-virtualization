@@ -15,23 +15,19 @@ nav:
   - Home: index.md
   - Day#1:
     - Env - Prerequisites: prerequisites.md
-    - Docker: dockerBasics.md
-    - Story of virtualization: story_of_virtualization.md
-#    - Code - SpringBoot Lab: javaspringboot.md
-#    - Code - Get Started with Maven: maven.md
-#    - Docker - Containers Lab: docker.md
-#    - Kubernetes - Charts Lab: kubernetes.md
-#    - Github - Git Repository Lab: github.md
-#    - Github - Actions Lab / CI: github-actions.md
+    - Code - SpringBoot Lab: javaspringboot.md
+    - Code - Get Started with Maven: maven.md
+    - Docker - Containers Lab: docker.md
+    - Kubernetes - Charts Lab: kubernetes.md
+    - Github - Git Repository Lab: github.md
+    - Github - Actions Lab / CI: github-actions.md
   - Day#2:
-    - page2 : page2.md
-    - page3 : page3.md
-#    - AWS - Basics Lab: aws.md
-#    - AWS - CloudFormation with Github Actions / CD: cloudformation.md
-#    - AWS - ECS Lab: ecs.md
-#    - AWS - CloudFormation Linting: cfn-nag.md
-#    - AWS - EKS Lab: eks.md
-#    - AWS - Cleanup: cleanup.md
+    - AWS - Basics Lab: aws.md
+    - AWS - CloudFormation with Github Actions / CD: cloudformation.md
+    - AWS - ECS Lab: ecs.md
+    - AWS - CloudFormation Linting: cfn-nag.md
+    - AWS - EKS Lab: eks.md
+    - AWS - Cleanup: cleanup.md
   - Going Further:
     - Ideas: further.md
 

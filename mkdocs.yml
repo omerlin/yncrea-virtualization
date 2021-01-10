@@ -12,23 +12,29 @@ site_description: >-
 
 nav:
   - Home: index.md
-  - Day 1:
-    - Env - Prerequisites: prerequisites.md
-    - Virtualization - Virtual Box: virtualBox.md
-    - Virtualization - Labs: virtualBoxLabs.md
-    - Docker - Basics Labs: dockerBasics.md
-    - Virtualization - Story and Concepts: story_of_virtualization.md
+  - Day#1:
+    - page1: page1.md
+    - page2: page2.md
+  - Day#2:
+      - page2: page3.md
+      - page3: page4.md
 
-  - Day 2:
-    - Kubernetes - first part: kubernetesIntroduction.md
-    - Kubernetes - second part: kubernetesBasics.md
-    - Cloud - Introduction to Cloud: cloudIntroduction.md
-    - Cloud - Google Cloud Platform: GoogleCloudPlatform.md
-  - Day 3:
-    - Kubernetes - Advanced: kubernetesAdvanced.md
-    - Evaluation - Quizz: quizz.md
+#  - Day#1:
+#    - Env - Prerequisites: prerequisites.md
+#    - Virtualization - Virtual Box: virtualBox.md
+#    - Virtualization - Labs: virtualBoxLabs.md
+#    - Docker - Basics Labs: dockerBasics.md
+#    - Virtualization - Story and Concepts: story_of_virtualization.md
+#  - Day#2:
+#    - Kubernetes - first part: kubernetesIntroduction.md
+#    - Kubernetes - second part: kubernetesBasics.md
+#    - Cloud - Introduction to Cloud: cloudIntroduction.md
+#    - Cloud - Google Cloud Platform: GoogleCloudPlatform.md
+#  - Day#3:
+#    - Kubernetes - Advanced: kubernetesAdvanced.md
+#    - Evaluation - Quizz: quizz.md
   - Cheatsheets:
-    - chocolatey: cheatsheets/choco.md
+    - chocolatey: cheatsheets/page1.md
     - virtualBoxManage: cheatsheets/vboxManage.md
     - docker: cheatsheets/docker.md
 

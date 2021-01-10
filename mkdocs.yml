@@ -10,14 +10,35 @@ site_description: >-
   <i>The course takes place over three days and intends to give students
   an understanding of virtualization technologies with a focus on containers (Docker) and orchestrators (Kubernetes).</i>
 
+
 nav:
   - Home: index.md
   - Day#1:
-    - page1: page1.md
-    - page2: page2.md
+      - Env - Prerequisites: prerequisites.md
+      - Code - SpringBoot Lab: javaspringboot.md
+      - Code - Get Started with Maven: maven.md
+      - Docker - Containers Lab: docker.md
+      - Kubernetes - Charts Lab: kubernetes.md
+      - Github - Git Repository Lab: github.md
+      - Github - Actions Lab / CI: github-actions.md
   - Day#2:
-      - page2: page3.md
-      - page3: page4.md
+      - AWS - Basics Lab: aws.md
+      - AWS - CloudFormation with Github Actions / CD: cloudformation.md
+      - AWS - ECS Lab: ecs.md
+      - AWS - CloudFormation Linting: cfn-nag.md
+      - AWS - EKS Lab: eks.md
+      - AWS - Cleanup: cleanup.md
+  - Going Further:
+      - Ideas: further.md
+
+#nav:
+#  - Home: index.md
+#  - Day#1:
+#    - page1: page1.md
+#    - page2: page2.md
+#  - Day#2:
+#      - page2: page3.md
+#      - page3: page4.md
 
 #  - Day#1:
 #    - Env - Prerequisites: prerequisites.md
@@ -33,10 +54,10 @@ nav:
 #  - Day#3:
 #    - Kubernetes - Advanced: kubernetesAdvanced.md
 #    - Evaluation - Quizz: quizz.md
-  - Cheatsheets:
-    - chocolatey: cheatsheets/page1.md
-    - virtualBoxManage: cheatsheets/vboxManage.md
-    - docker: cheatsheets/docker.md
+#  - Cheatsheets:
+#    - chocolatey: cheatsheets/choco.md
+#    - virtualBoxManage: cheatsheets/vboxManage.md
+#    - docker: cheatsheets/docker.md
 
 theme:
   language: en

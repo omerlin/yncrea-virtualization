@@ -1,8 +1,12 @@
 # TODO
 
+*cheatsheet example*: https://adamrushuk.github.io/cheatsheets/introduction/
+
 ## virtualBoxLabs.md
 
 ### VirtualBoxManage tool
+
+https://www.virtualbox.org/manual/ch08.html
 
 
 ### Why Docker machine ?

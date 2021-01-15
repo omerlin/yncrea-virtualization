@@ -49,21 +49,23 @@ Ask some questions about the driver interface created ?
 - pinging machine
 - access to internet
 
-!!!! Note:
-Documentation is here: https://rancher.com/docs/os/v1.x/en/overview/
+!!! Note:
+    Documentation is here: https://rancher.com/docs/os/v1.x/en/overview/
 
 !!! Tip:
-To start the VirtualBox guest addition:
+    To start the VirtualBox guest addition:
 
-````
-       ros service enable virtual-box
-       ros service start virtual-box
-````
-You need to reboot the VM to really activate the service ( ? )
+    ```
+           ros service enable virtual-box
+           ros service start virtual-box
+    ```
+
+    You need to reboot the VM to really activate the service
 
 TABLE :
 
-COMMAND	DESCRIPTION
-docker	Good old Docker, use that to run stuff.
-system-docker	The Docker instance running the system containers. Must run as root or using sudo
-ros	Control and configure RancherOS
+COMMAND       |	DESCRIPTION
+-------------------------------------------------------------------------------------------------
+docker	      | Good old Docker, use that to run stuff.
+system-docker |	The Docker instance running the system containers. Must run as root or using sudo
+ros	          | Control and configure RancherOS

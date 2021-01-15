@@ -54,11 +54,3 @@ choco uninstall git --all-versions -y
 ```
 choco outdated
 ```
-
-[Setup]: https://docs.chocolatey.org/en-us/choco/setup
-
-[https://docs.chocolatey.org/en-us/choco/commands/]: https://docs.chocolatey.org/en-us/choco/commands/
-
-[]: https://docs.chocolatey.org/en-us/choco/setup
-
-[]: https://docs.chocolatey.org/en-us/choco/setup

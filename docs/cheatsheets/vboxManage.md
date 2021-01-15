@@ -23,7 +23,7 @@ VBoxManage unregistervm VMNAME --delete
 VBoxManage showvminfo VMNAME --machinereadable | Select-String -Pattern 'Forwarding'
 ```
 
-!!! Note: 
+!!! Note 
     Select-String is a PowerShell command
 
 ## VirtualBox Help

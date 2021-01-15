@@ -1,6 +1,10 @@
 # VirtualBox cheatsheet
 
-The CLI tool to do all Virtualbox operations
+The CLI tool to do all Virtualbox operations: {==VBoxManage==}
+
+## Useful links
+
+* [VboxManage reference guide](https://www.virtualbox.org/manual/ch08.html)
 
 !!! Tip
     Add your Virtualbox location to your environment PATH

@@ -42,11 +42,11 @@ The second way is by finding where the private key is located and then create a 
 
 # Labs 2: create a local Network of Linux Box
 You need to start 2 VM, create a Nat Network and check :
+
 * VM are reachable on the Nat network
 * The VM can access to internet
 * You can reach the 2 guest VM from the host using ssh alias
 
-
-# Labs 3: deploy RancherOS using DockerMachine  
+# Labs 3: deploy RancherOS using DockerMachine
 
  

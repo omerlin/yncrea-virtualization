@@ -1,5 +1,13 @@
 # Docker cheat sheet
 
+We describe here the most common Docker usage
+
+!!! Tip
+    To have details on a particular command
+    ```
+    docker <command> --help
+    ```
+
 ## Build
 
 Build an image from the Dockerfile in the

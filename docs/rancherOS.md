@@ -11,7 +11,7 @@ Download the latest release locally on your computer.
 
 !!! Warning
     Use {==Git Bash==} to execute the following commands (**mobaXterm** won't work well here)
-    Take care to change the {==virtualbox-boot2docker-url==} parameter value to refer the local file
+    Take care to change the {==virtualbox-boot2docker-url==} parameter value to refer to **local file**
 
 ``` bash
 $ docker-machine create -d virtualbox \
@@ -19,3 +19,14 @@ $ docker-machine create -d virtualbox \
         --virtualbox-memory <MEMORY-SIZE> \
         <MACHINE-NAME>
 ```
+
+```
+$ VBoxManage list runningvms | grep <MACHINE-NAME>
+```     
+
+## LABS: install 2 RancherOS machines
+
+### Instruction
+Install 2 machines named "server" and "worker1"
+
+### Checking installation

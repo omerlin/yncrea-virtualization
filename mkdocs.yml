@@ -19,6 +19,7 @@ nav:
     - Virtualization - Virtual Box: virtualBox.md
     - Virtualization - Labs: virtualBoxLabs.md
     - Virtualization - Docker machine: dockerMachine.md
+    - Virtualization - RancherOS: rancherOS.md
     - Docker - Basics: dockerBasics.md
     - Docker compose: dockerCompose.md
 

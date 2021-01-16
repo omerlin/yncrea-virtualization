@@ -51,3 +51,11 @@ Install 2 machines named "server" and "worker1"
     ```
 
     You need to reboot the VM to really activate the service
+
+## RancherOS commands summary
+
+|COMMAND       |DESCRIPTION                                                         |
+------------------------------------------------------------------------------------|
+|docker	       | Good old Docker, use that to run stuff.                            |
+|system-docker | The Docker instance running the system containers. (root rights)   |
+|ros	       | Control and configure RancherOS                                    |

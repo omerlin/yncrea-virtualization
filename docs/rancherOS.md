@@ -30,3 +30,14 @@ $ VBoxManage list runningvms | grep <MACHINE-NAME>
 Install 2 machines named "server" and "worker1"
 
 ### Checking installation
+
+!!! Example "Your turn"
+    Ask you some questions about the driver interface created ?
+
+    * Which type ?
+    * Could you check your networks possibility ?
+    * Pinging machine
+    * Access to internet ?
+
+!!! Note
+    Documentation is here: https://rancher.com/docs/os/v1.x/en/overview/

@@ -34,10 +34,20 @@ Install 2 machines named "server" and "worker1"
 !!! Example "Your turn"
     Ask you some questions about the driver interface created ?
 
-    * Which type ?
-    * Could you check your networks possibility ?
-    * Pinging machine
-    * Access to internet ?
+    - [x] Which type ?
+    - [x] Could you check your networks possibility ?
+    - [x] Pinging machine
+    - [x] Access to internet ?
 
 !!! Note
-    Documentation is here: https://rancher.com/docs/os/v1.x/en/overview/
+    Rancher Documentation is here: https://rancher.com/docs/os/v1.x/en/overview/
+
+!!! Tip
+    To start the VirtualBox guest addition:
+
+    ``` bash
+       ros service enable virtual-box 
+       ros service start virtual-box
+    ```
+
+    You need to reboot the VM to really activate the service

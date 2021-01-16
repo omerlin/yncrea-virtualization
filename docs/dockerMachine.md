@@ -17,19 +17,6 @@ chmod +x "$HOME/bin/docker-machine.exe"
 
 # Why RancherOS ?
 
-^^Several reasons :^^
-* This is because [Rancher](https://rancher.com/) is a {==cool==} company delivering good {==KISS==} cloud tools
-* For Kubernetes, we will see 2 good {==On Premise==} Rancher tools
-  * K3S a very light kubernetes dedicated to {==Edge==} Computing
-    It really nice as you can start really easily a Kubernetes cluster on Raspberry PI
-  * RKE (Rancher Kubernetes Engine) the professional Kubernetes packaging easy to use 
-* Another very cool company you should have a look to: [Hashicorp](https://www.hashicorp.com/)
-
-[comment]: <> ([^1] Keep It Simple and Stupid)
-
-[comment]: <> ([^2] "On Premise" means "private", we can say also "In House")
-
-[comment]: <> ([^3] Edge computing could be seen as a micro Data center &#40;IOT / 5G&#41;)
 
 ## Installation of RancherOs using Docker machine
 

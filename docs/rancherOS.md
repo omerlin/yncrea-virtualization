@@ -6,13 +6,13 @@ Download the latest release locally on your computer.
 [ Link to get the last RancherOS release](https://releases.rancher.com/os/latest/rancheros.iso)
 
 !!! Question "why?"
-To avoid using too much bandwidth as we will reuse the image several time
+    To avoid using too much bandwidth as we will reuse the image several time
 
 [ The Rancher Official installation documentation] (https://rancher.com/docs/os/v1.x/en/installation/workstation/docker-machine/)
 
 !!! Warning
-Use {==Git Bash==} to execute the following commands (**mobaXterm** won't work well here)
-Take care to change the {==virtualbox-boot2docker-url==} parameter value to refer the local file
+    Use {==Git Bash==} to execute the following commands (**mobaXterm** won't work well here)
+    Take care to change the {==virtualbox-boot2docker-url==} parameter value to refer the local file
 
 ``` bash
 $ docker-machine create -d virtualbox \
@@ -33,7 +33,7 @@ Install 2 machines named "server" and "worker1"
 ### Checking installation
 
 !!! Example "Your turn"
-Ask some questions about the driver interface created ?
+    Ask some questions about the driver interface created ?
 
     * which type ?
     * could you check your networks possibility ?
@@ -41,10 +41,10 @@ Ask some questions about the driver interface created ?
     * access to internet ?
 
 !!! Note
-Documentation is here: https://rancher.com/docs/os/v1.x/en/overview/
+    Documentation is here: https://rancher.com/docs/os/v1.x/en/overview/
 
 !!! Tip
-To start the VirtualBox guest addition:
+    To start the VirtualBox guest addition:
 
     ```
            ros service enable virtual-box

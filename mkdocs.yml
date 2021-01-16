@@ -18,8 +18,9 @@ nav:
     - Virtualization - Story and Concepts: story_of_virtualization.md
     - Virtualization - Virtual Box: virtualBox.md
     - Virtualization - Labs: virtualBoxLabs.md
-    - Virtualization - RancherOS - Docker machine: dockerMachine.md
+    - Virtualization - Docker machine: dockerMachine.md
     - Docker - Basics: dockerBasics.md
+    - Docker compose: dockerCompose.md
 
 
   - Day#2:

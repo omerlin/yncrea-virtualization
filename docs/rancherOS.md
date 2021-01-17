@@ -17,7 +17,8 @@
 
 
 !!! note
-    Another very cool company you should have a look to: [Hashicorp](https://www.hashicorp.com/) +
+    Another very cool company you should have a look to: [Hashicorp](https://www.hashicorp.com/)
+
     Example of nice products: vagrant, packer, terraform, vault
 
 

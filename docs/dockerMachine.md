@@ -1,8 +1,27 @@
-# Why Docker machine ?
+# What is Docker machine ?
 
-Integrates this : https://docs.docker.com/machine/#whats-the-difference-between-docker-engine-and-docker-machine
+## Docker engine
 
-## Installation of DockerMachine:
+When people say “Docker” they typically mean ==Docker Engine==, the client-server application made up of the Docker daemon, a REST API that specifies interfaces for interacting with the daemon, and a command line interface (CLI) client
+
+![DOKENG](./files/virtualization/docker_engine.png "Docker engine")
+
+## Docker machine
+
+==Docker Machine== is a tool for provisioning and managing your Dockerized hosts (hosts with Docker Engine on them)
+
+![DOKMACH](./files/virtualization/docker_machine.png "Docker machine")
+
+The Dockerized hosts themselves can be thought of, and are sometimes referred to as, managed “machines”.
+
+![DOKMAGT](./files/virtualization/docker_managed_machine.png "Docker managed machine")
+
+## Why using Docker Machine ?
+
+* We want an efficient way to provision machine with Docker pre-installed
+* We want a small (in size) Docker enabled OS (Ubuntu 12.04.x is the default)
+
+## Installation
 
 Follow: [Docker machine installation link](https://github.com/docker/machine/releases)
 
@@ -15,7 +34,7 @@ chmod +x "$HOME/bin/docker-machine.exe"
 !!! Important
     To play the above script, you will need {==git-bash==}
 
-# Why RancherOS ?
+## Why RancherOS ?
 
 ^^Several reasons :^^ :thumbsup:
 
@@ -46,7 +65,7 @@ chmod +x "$HOME/bin/docker-machine.exe"
 * [ Rancher OS overview](https://rancher.com/docs/os/v1.x/en/overview/)
 
 
-## LABS: installing RancherOS machines
+## LABS: Installing RancherOS machines
 
 They are several objectives behind this LAB
 * Show you another virtual machine deployments

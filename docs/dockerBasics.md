@@ -3,11 +3,12 @@
 Virtualbox required under Windows7 
 not under windows10 if you use the native virtualization
 
-# Installation
+## Installation
 Depends on the OS.
+
 * Windows:	https://docs.docker.com/docker-for-windows/
 * Mac:      https://docs.docker.com/docker-for-mac/
-* {{=Linux=}}:    https://docs.docker.com/engine/install/
+* ==Linux==:    https://docs.docker.com/engine/install/
 
 
 !!! Tips 
@@ -23,30 +24,31 @@ docker info
 ````
 This give you details around version and embedded plugins
 
-# Image and runtime
+## Image and runtime
 
 Dockerfile
-````
+```
 FROM ubuntu
 RUN apt-get update && apt-get install -y nginx
 COPY index.html /var/share/nginx/html
 CMD nginx -g "daemon off";
-````
+```
 
 
-# Network
+## Network
 
 There are several network drivers :
-* {{=bridge=}}: This is the default non routable network - adress 17.2.17.0.2. Used for standalones application
+
+* ==bridge==: This is the default non routable network - adress 17.2.17.0.2. Used for standalones application
 * host : The container is using the host network
 * macvlan: A MAC address is dedicated to the container
-* {{=overlay=}}: Virtual Embedded network added to the host network allowing containers communication (used in Kubernetes)
+* ==overlay==: Virtual Embedded network added to the host network allowing containers communication (used in Kubernetes)
 * None: Deactivated network
 
 To see the default network, type a command like this one :
-````
+```
 docker run -ti nginx bash -c "hostname -i"
-````
+```
 
 To be able to use the internal network:
 ````
@@ -81,7 +83,7 @@ A simple and traditional way for data sharing between a host and guest :
 docker run  --rm -ti --volume /home/ubuntu/foo:/foo alpine sh
 ```
 
-!!! Warning:
+!!! Warning
     Security leak as we are accessing the host volume 
     Not portable
 
@@ -102,14 +104,14 @@ sudo ls -als /var/snap/docker/common/var-lib-docker
 docker volume ls
 ````
 
-# Public registry
+## Public registry
 
-# Private registry
+## Private registry
 
 Private registries are used for On Premise deployment.
 Some common private registry : Nexus or Jfrog Artifactory
 
-To use a private registry you need to deploy some private cerficate on your Docker client.
+To use a private registry you need to deploy some private certificate on your Docker client.
 Some commands may be restricted - it depends on the server configuration ( "docker search" forbidden for instance)
 
 When you are in a corporate company, your Docker build may rely on remote internet registries
@@ -125,9 +127,9 @@ Several options in front of you:
 * Or (best option) your private registry is doing the proxy for you
 
 
-# Build image - Slimming stage
+## Build image - Slimming stage
 
-## Code to deploy
+### Code to deploy
 
 helloworld.go :
 
@@ -143,7 +145,7 @@ Build :
 env GOOS=linux GOARCH=amd64 go build
 ```
 
-## Beginner
+### Beginner
 
 Dockerfile:
 ```
@@ -154,7 +156,7 @@ ENTRYPOINT ["./hello"]
 
 What is the issue there ?
 
-## Intermediary level
+### Intermediary level
 
 Dockerfile:
 ```
@@ -165,11 +167,11 @@ ENTRYPOINT ["./hello"]
 
 Much better ...
 
-## Seasoned integrator
+### Seasoned integrator
 
 Dockerfile using “stage” builds
 
-````
+```Dockerfile
 # Step 1
 FROM golang:alpine3.7 as build-env
 COPY main.go hello/main.go
@@ -180,7 +182,7 @@ RUN env GOOS=linux GOARCH=amd64 go build
 FROM scratch
 COPY --from=build-env /go/hello/hello /go/bin/hello
 ENTRYPOINT ["/go/bin/hello"]
-````
+```
 
 * My Dockerfile becomes a CI tool 
 * ... and the size is reduced to the max !

@@ -34,7 +34,7 @@ chmod +x "$HOME/bin/docker-machine.exe"
 
 
 !!! note
-Another very cool company you should have a look to: [Hashicorp](https://www.hashicorp.com/)
+    Another very cool company you should have a look to: [Hashicorp](https://www.hashicorp.com/)
 
     Example of nice products: vagrant, packer, terraform, vault
 
@@ -68,11 +68,11 @@ $ docker-machine create -d virtualbox \
 ```
 
 !!! Warning
-Use ==Git Bash== to execute the following commands (**MobaXterm** won't work well here)
+    Use ==Git Bash== to execute the following commands (**MobaXterm** won't work well here)
 
 !!! Tip
-To avoid using too much bandwidth you can download the ISO locally (around 140Mb)
-and then change the parameter ==virtualbox-boot2docker-url== value to refer a local file
+    To avoid using too much bandwidth you can download the ISO locally (around 140Mb)
+    and then change the parameter ==virtualbox-boot2docker-url== value to refer a local file
 
 To check the VM are deployed:
 
@@ -83,7 +83,7 @@ $ VBoxManage list runningvms | grep <MACHINE-NAME>
 ### Understand the installation
 
 !!! Example "Your turn"
-Ask you some questions about the driver interface created ?
+    Ask you some questions about the driver interface created ?
 
     - [x] What are the interface type ?
     - [x] Could you check your networks possibility ?
@@ -92,7 +92,7 @@ Ask you some questions about the driver interface created ?
 
 
 !!! Tip
-To start the VirtualBox guest addition:
+    To start the VirtualBox guest addition:
 
     ```bash
        ros service enable virtual-box 

@@ -1,6 +1,17 @@
 # Why RancherOS ?
 
-Download the latest release locally on your computer.
+^^Several reasons :^^ :thumbsup:
+* This is because [Rancher](https://rancher.com/) is a {==cool==} company delivering good {==KISS==}[^1] cloud tools
+* For Kubernetes, we will see 2 good {==On Premise==} [^2] Rancher tools
+    * K3S a very light kubernetes dedicated to {==Edge==} [^3] Computing
+      It really nice as you can start really easily a Kubernetes cluster on Raspberry PI
+    * RKE (Rancher Kubernetes Engine) the professional Kubernetes packaging easy to use
+* Another very cool company you should have a look to: [Hashicorp](https://www.hashicorp.com/)
+
+[^1] Keep It Simple and Stupid
+[^2] "On Premise" means "private", we can say also "In House"
+[^3] Edge computing could be seen as a micro Data center (IOT / 5G)
+
 
 ## Links
 
@@ -18,7 +29,7 @@ They are several objectives behind this LAB
 * Have machines ready for a future Kubernetes cluster
 
 ### Instruction
-You need to install 2 machines named "ROSserver" and "ROSworker1"
+You need to install 2 machines named "ROSServer" and "ROSWorker1"
 
 ### Deployment instructions
 To deploy a RancherOS machine, you will need this command. (you will have to adapt it)
@@ -31,11 +42,11 @@ $ docker-machine create -d virtualbox \
 ```
 
 !!! Warning
-Use ==Git Bash== to execute the following commands (**mobaXterm** won't work well here)
+    Use ==Git Bash== to execute the following commands (**MobaXterm** won't work well here)
 
 !!! Tip
-To avoid using too much bandwidth you can download the ISO locally (around 140Mb)
-and then change the parameter ==virtualbox-boot2docker-url== value to refer a local file
+    To avoid using too much bandwidth you can download the ISO locally (around 140Mb)
+    and then change the parameter ==virtualbox-boot2docker-url== value to refer a local file
 
 To check the VM are deployed:
 

@@ -2,11 +2,11 @@
 
 ^^Several reasons :^^ :thumbsup:
 
-* This is because [Rancher](https://rancher.com/) is a ==cool== company delivering KISS[^1] cloud tools
+* This is because [Rancher](https://rancher.com/) is a ==cool== company delivering ==KISS==[^1] cloud tools
 
-* For Kubernetes, we will see 2 good "On Premise"[^2] Rancher tools
+* For Kubernetes, we will see 2 good ==On Premise==[^2] Rancher tools
 
-    * ==K3S== a very light kubernetes dedicated to Edge[^3] Computing
+    * ==K3S== a very light kubernetes dedicated to ==Edge==[^3] Computing
       It really nice as you can start really easily a Kubernetes cluster on Raspberry PI
 
     * ==RKE== (Rancher Kubernetes Engine) the professional Kubernetes packaging easy to use
@@ -86,7 +86,7 @@ $ VBoxManage list runningvms | grep <MACHINE-NAME>
 ## RancherOS commands summary
 
 |COMMAND       |DESCRIPTION                                                      |
-|:------------:|:---------------------------------------------------------------:|
+|--------------|-----------------------------------------------------------------|
 |docker        | Good old Docker, use that to run stuff.                         |
 |system-docker | The Docker instance running the system containers. (root rights)|
 |ros           | Control and configure RancherOS                                 |

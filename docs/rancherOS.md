@@ -1,16 +1,25 @@
 # Why RancherOS ?
 
 ^^Several reasons :^^ :thumbsup:
-* This is because [Rancher](https://rancher.com/) is a {==cool==} company delivering good {==KISS==}[^1] cloud tools
-* For Kubernetes, we will see 2 good {==On Premise==} [^2] Rancher tools
-    * K3S a very light kubernetes dedicated to {==Edge==} [^3] Computing
-      It really nice as you can start really easily a Kubernetes cluster on Raspberry PI
-    * RKE (Rancher Kubernetes Engine) the professional Kubernetes packaging easy to use
-* Another very cool company you should have a look to: [Hashicorp](https://www.hashicorp.com/)
 
-[^1] Keep It Simple and Stupid
-[^2] "On Premise" means "private", we can say also "In House"
-[^3] Edge computing could be seen as a micro Data center (IOT / 5G)
+* This is because [Rancher](https://rancher.com/) is a ==cool== company delivering ==KISS==[^1] cloud tools
+
+* For Kubernetes, we will see 2 good ==On Premise== [^2] Rancher tools
+
+    * ==K3S== a very light kubernetes dedicated to ==Edge== [^3] Computing
+      It really nice as you can start really easily a Kubernetes cluster on Raspberry PI
+
+    * ==RKE== (Rancher Kubernetes Engine) the professional Kubernetes packaging easy to use
+  
+  [^1] Keep It Simple and Stupid
+  [^2] "On Premise" means "private", we can say also "In House"
+  [^3] Edge computing could be seen as a micro Data center (IOT / 5G)
+
+
+!!! note
+    Another very cool company you should have a look to: [Hashicorp](https://www.hashicorp.com/)
+    Example of nice products: vagrant, packer, terraform, vault
+
 
 
 ## Links

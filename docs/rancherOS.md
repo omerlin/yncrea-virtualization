@@ -43,9 +43,9 @@ Install 2 machines named "server" and "worker1"
     Rancher Documentation is here: https://rancher.com/docs/os/v1.x/en/overview/
 
 !!! Tip
-To start the VirtualBox guest addition:
+    To start the VirtualBox guest addition:
 
-    ``` bash
+    ```bash
        ros service enable virtual-box 
        ros service start virtual-box
     ```

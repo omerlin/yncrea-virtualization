@@ -61,7 +61,7 @@ docker run -d --net=host nginx
 ````
 We will not enter in deep on complex options ...
 
-# Data Storage
+## Data Storage
 
 ![DOCKERLAYER](./files/virtualization/docker_image_layers.png "Docker image layers")
 
@@ -108,8 +108,11 @@ docker volume ls
 
 ## Private registry
 
-Private registries are used for On Premise deployment.
-Some common private registry : Nexus or Jfrog Artifactory
+Private registries are used to manage your company artifacts.
+Some common private registry : 
+
+* [Sonatype Nexus](https://www.sonatype.com/nexus/repository-oss) 
+* [Jfrog Artifactory](https://jfrog.com/artifactory/)
 
 To use a private registry you need to deploy some private certificate on your Docker client.
 Some commands may be restricted - it depends on the server configuration ( "docker search" forbidden for instance)

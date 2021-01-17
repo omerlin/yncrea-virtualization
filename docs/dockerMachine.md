@@ -127,3 +127,46 @@ $ VBoxManage list runningvms | grep <MACHINE-NAME>
 |docker        | Good old Docker, use that to run stuff.                         |
 |system-docker | The Docker instance running the system containers. (root rights)|
 |ros           | Control and configure RancherOS                                 |
+
+## LABS: machine setup
+
+### Changing console
+The machine is particular there is by default no persistence on the OS console
+You can see the available console with:
+
+```
+ros console list
+```
+
+Change to ubuntu:
+
+```
+ros console switch ubuntu
+```
+You will have to restart the session
+
+Now you will get data persistence in your home like a traditional OS
+
+### Adding git for future labs
+We will need to have "git" on the machine
+Add this alias to a ~/.bash_profile
+
+```
+alias git='docker run -ti --rm -v /home/docker:/git bwits/docker-git-alpine'
+```
+!!! note
+    As you can see everything is docker ... :smiley: !
+
+### Adding docker compose
+Before switching to kubernetes we would like to deploy complex things with docker.
+Let prepare the installation of docker-compose
+
+```
+sudo wget https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m) -O /usr/bin/docker-compose
+sudo chmod +x /usr/bin/docker-compose
+```
+
+### Adding your own private key
+Use ==ssh-gen== command to add a private/public rsa key - so you can easily connect to your machine. (from MobaXterm for example)
+
+

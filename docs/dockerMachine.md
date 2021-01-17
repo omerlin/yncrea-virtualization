@@ -28,9 +28,9 @@ chmod +x "$HOME/bin/docker-machine.exe"
 
     * ==RKE== (Rancher Kubernetes Engine) the professional Kubernetes packaging easy to use
 
-  [^1] Keep It Simple and Stupid
-  [^2] "On Premise" means "private", we can say also "In House"
-  [^3] Edge computing could be seen as a micro Data center (IOT / 5G)
+  [^1]: Keep It Simple and Stupid
+  [^2]: "On Premise" means "private", we can say also "In House"
+  [^3]: Edge computing could be seen as a micro Data center (IOT / 5G)
 
 
 !!! note

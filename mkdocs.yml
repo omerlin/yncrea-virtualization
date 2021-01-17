@@ -21,6 +21,7 @@ nav:
     - Virtualization - Docker machine: dockerMachine.md
     - Docker - Basics: dockerBasics.md
     - Docker compose: dockerCompose.md
+    - Test: test.md
 
 
   - Day#2:

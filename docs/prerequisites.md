@@ -5,7 +5,7 @@ All the pre-requisites to follow the labs
 ## System pre-requisites
 You need to be on Windows (7+), Linux or MacOS.
 
-VVT-x/AMD-v virtualization must be enabled in BIOS
+VT-x/AMD-v virtualization must be enabled in BIOS
 
 !!! Warning
     You need the Administrative rights to be able to install the software
@@ -43,8 +43,9 @@ You need to install this list of software
 We do recommend also to install git, to clone source on your computer.
 
 ```bash
-   choco intall -y mobaxterm vagrant git
+   choco install -y mobaxterm vagrant git
 ```
 
 !!! Note
     We advise installing virtualbox manually instead of using chocolatey
+    [Virtualbox download](https://www.virtualbox.org/wiki/Downloads)

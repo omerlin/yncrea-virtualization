@@ -69,7 +69,7 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tabbed
   - pymdownx.tilde
-copyright: '&copy; 2020 Julien Berger'
+copyright: '&copy; 2020 Olivier Merlin'
 
 # Customization
 extra:
@@ -79,7 +79,7 @@ extra:
     - icon: fontawesome/brands/docker
       link: https://hub.docker.com/repository/docker/jurocknsail/yncrea-hellomicro
     - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/in/julien-berger-0a9671154/
+      link: https://www.linkedin.com/in/olivier-merlin-0a9671154/
 
 # Google Analytics
 google_analytics:

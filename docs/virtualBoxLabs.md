@@ -11,6 +11,13 @@ The local deployment could be useful to:
 !!! Important
     These labs will be reused for the future deployment, so don't miss it please !
 
+## Vboxmanage
+
+```
+vboxmanage showvminfo worker1
+```
+Look if VT-x options are activated
+
 # Labs 1: Using Linux Box with Vagrant
 
 ## Step 1: Start a VM
@@ -52,6 +59,14 @@ You need to start 2 VM, create a Nat Network and check :
 * VM are reachable on the Nat network
 * The VM can access to internet
 * You can reach the 2 guest VM from the host using ssh alias
+
+## Correction
+
+See: https://github.com/omerlin/yncrea-virtualization-labs
+You have in the TwoBoxes the Vagrant file
+
+ssh vagrant@127.0.0.1 -p 2200
+ssh vagrant@127.0.0.1 -p 2222
 
 # Labs 3: deploy RancherOS using DockerMachine
 

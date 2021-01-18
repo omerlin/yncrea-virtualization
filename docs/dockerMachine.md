@@ -89,10 +89,6 @@ $ docker-machine create -d virtualbox \
 !!! Warning
     Use ==Git Bash== to execute the following commands (**MobaXterm** won't work well here)
 
-!!! Tip
-    To avoid using too much bandwidth you can download the ISO locally (around 140Mb)
-    and then change the parameter ==virtualbox-boot2docker-url== value to refer a local file
-
 To check the VM are deployed:
 
 ```
@@ -149,11 +145,12 @@ Now you will get data persistence in your home like a traditional OS
 
 ### Adding git for future labs
 We will need to have "git" on the machine
-Add this alias to a ~/.bash_profile
 
-```
+```bash
+# Add this alias to a ~/.bash_profile
 alias git='docker run -ti --rm -v /home/docker:/git bwits/docker-git-alpine'
 ```
+
 !!! note
     As you can see everything is docker ... :smiley: !
 

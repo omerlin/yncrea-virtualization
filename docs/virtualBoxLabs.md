@@ -26,8 +26,8 @@ You have just to do something like:
 The first command {==vagrant init==} generate a {==Vagrantfile==}
 The second command {==vagrant up==} deploy/instantiate the VM.
 
-!!! Note: 
-    The networks options are quite limited on Virtualbox ( Nat and Hosted )
+!!! Note 
+    Vagrant networks options are quite limited on Virtualbox ( Nat and ==intnet== )
 
 ## Step 2: access the VM using ssh
 You have several way to access the VM using SSH.
@@ -39,6 +39,12 @@ The easiest way is by doing a:
 
 The second way is by finding where the private key is located and then create a config file in your $HOME/.ssh directory.
 
+## Alternative : 
+
+you can use this labs correction: https://github.com/omerlin/yncrea-virtualization-labs
+
+
+https://www.vagrantup.com/docs/vagrantfile/machine_settings
 
 # Labs 2: create a local Network of Linux Box
 You need to start 2 VM, create a Nat Network and check :

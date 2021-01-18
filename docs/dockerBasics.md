@@ -105,8 +105,17 @@ docker volume ls
 ````
 
 ## Public registry
+[Docker Hub](https://hub.docker.com/) is the default public registry.
+There are other public registry free for reading image (Redhat http://quay.io for example)
+
+!!! Note
+    Don't hesitate to create your own free registry at Docker Hub.
 
 ## Private registry
+
+!!! Warning
+    Don't confuse between Saas private registry (so managed registry) and company private registry.
+    Even at Docker you can have private registry (one free per account)
 
 Private registries are used to manage your company artifacts.
 Some common private registry : 

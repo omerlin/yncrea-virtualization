@@ -164,6 +164,29 @@ sudo chmod +x /usr/bin/docker-compose
 ```
 
 ### Adding your own private key
-Use ==ssh-gen== command to add a private/public rsa key - so you can easily connect to your machine. (from MobaXterm for example)
+Use ==ssh-keygen== command to add a private/public rsa key - so you can easily connect to your machine. (from MobaXterm for example)
 
+!!! Tip
+    ```
+    Host rosserver
+    HostName 127.0.0.1
+    User docker
+    Port 2222
+    UserKnownHostsFile /dev/null
+    StrictHostKeyChecking no
+    PasswordAuthentication no
+    IdentityFile ~/.ssh/id_ros_rsa
+    IdentitiesOnly yes
+    LogLevel FATAL
+
+    Host rosworker1
+    HostName 127.0.0.1
+    User docker
+    Port 2223
+    UserKnownHostsFile /dev/null
+    StrictHostKeyChecking no
+    PasswordAuthentication no
+    IdentityFile ~/.ssh/id_ros_rsa
+    IdentitiesOnly yes
+    ```
 

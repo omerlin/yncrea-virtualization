@@ -22,9 +22,10 @@ We will deploy this :
 
 The project URL is this one : [dockprom](https://github.com/stefanprodan/dockprom)
 
-!!! Warning:
+!!! Warning
     Before deploying we will do a snapshot of our machines
 
 We will deploy :
+
 * the whole infrastructure on "ROSmaster" machine
 * the Host monitoring agent on "ROSworker1" machine 

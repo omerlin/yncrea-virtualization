@@ -138,6 +138,8 @@ Several options in front of you:
 * Proxy in the daemon docker configuration
 * Or (best option) your private registry is doing the proxy for you
 
+!!! TODO
+    Add a schema !!!
 
 ## Build image - Slimming stage
 

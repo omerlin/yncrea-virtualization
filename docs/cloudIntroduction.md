@@ -60,8 +60,8 @@ the companies can move from Public to Private Cloud or create Hybrid CLoud.
 * Huge demand for expertise 
 
 !!! success
-OpenStack is one of the top 3 most active open source projects (Python) and manages 15 million compute cores
-You can have a better idea of project size looking at: [Openstack User Stories]https://www.openstack.org/user-stories/
+    OpenStack is one of the top 3 most active open source projects (Python) and manages 15 million compute cores
+    You can have a better idea of project size looking at: [Openstack User Stories](https://www.openstack.org/user-stories/)
 
 OpenStack is a cloud operating system that controls large pools of compute, storage, and networking resources throughout a datacenter, +
 all managed and provisioned through APIs with common authentication mechanisms.
@@ -74,6 +74,7 @@ Beyond standard infrastructure-as-a-service functionality, additional components
 
 ### Openstack Hypervisors
 OpenStack Compute (nova) supports many hypervisors to various degrees, including:
+
 * KVM
 * LXC
 * QEMU
@@ -88,3 +89,8 @@ Give a better idea of the project size :
 
 ![OpenStackFullPicture](./files/virtualization/openstack_detailed_archi.png "Openstack full picture")
 
+###Is OpenStack Dead 2020?
+Yes, OpenStack is still alive and well, and it continues to evolve with interesting new features,
+like [StarlingX](https://www.starlingx.io/).
+But many of the vendors that originally specialized in OpenStack, such as Mirantis, have now shifted their attention to Kubernetes.
+Others, like SUSE, have dropped out of the OpenStack market altogether. SUSE bought Rancher in mid 2020.

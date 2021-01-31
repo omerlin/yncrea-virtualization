@@ -25,8 +25,9 @@ nav:
 
   - Day#2:
     - Cloud - Introduction to Cloud: cloudIntroduction.md
-    - Kubernetes - first part: kubernetesIntroduction.md
-    - Kubernetes - second part: kubernetesBasics.md
+    - Kubernetes - introduction: kubernetesIntroduction.md
+    - Kubernetes - installation: kubernetesInstallation.md
+    - Kubernetes - basics: kubernetesBasics.md
     - Cloud - Google Cloud Platform: GoogleCloudPlatform.md
 
   - Day#3:

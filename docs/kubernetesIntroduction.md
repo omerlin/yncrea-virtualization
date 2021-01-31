@@ -178,9 +178,9 @@ K8s is **not opinionated** with these things simply to allow us to build our app
 Of course, Kubernetes isn’t the only tool on the market. There are a variety, including:
 
 * `Docker Compose`— good for staging but not production-ready.
-* `Docker Swarm` - Docker Swarm seems easy and quick to bootstrap ... but Docker Inc. has been purchased by Mirantis
+* `Docker Swarm` - Docker Swarm seems easy and quick to bootstrap ... but Docker Inc. has been purchased by Mirantis - there are some concerns about the future.
                    It's sufficient for small deployment
-* `Hashicorp Nomad`— allows for cluster management and scheduling but it does not solve secret and config management, service discover, and monitoring needs.
+* `Hashicorp Nomad`— allows for cluster management and scheduling but {--it does not solve secret and config management, service discover--}, and monitoring needs.
 * `Titus—Netflix’s` open-source orchestration platform doesn’t have enough people using it in production.
 
 Overall, Kubernetes offers the best out-of-the-box features along with countless third-party add-ons to easily extend its functionality.

@@ -143,3 +143,44 @@ These master components comprise a master node:
 
 * ==Underlying infrastructure==: Where you run Kubernetes is up to you. This can be bare metal servers, virtual machines, public cloud providers, private clouds, and hybrid cloud environments. 
   One of Kubernetes’s key advantages is it works on many different kinds of infrastructure.
+
+## What benefits does Kubernetes offer?
+
+Out of the box, K8S provides several key features that allow us to run immutable infrastructure. 
+Containers can be killed, replaced, and self-heal automatically, 
+and the new container gets access to those support volumes, secrets, configurations, etc., that make it function.
+
+You can have also a look to [Kubernetes home page](https://kubernetes.io/)
+
+These key K8S features make your containerized application scale efficiently:
+
+* ==Horizontal scaling==. Scale your application as needed from command line or UI.
+* ==Automated rollouts and rollbacks==. Roll out changes that monitor the health of your application—ensuring all instances don’t fail or go down simultaneously. If something goes wrong, K8S automatically rolls back the change.
+* ==Service discovery and load balancing==. Containers get their own IP so you can put a set of containers behind a single DNS name for load balancing.
+* ==Storage orchestration==. Automatically mount local or public cloud or a network storage.
+* ==Secret and configuration management==. Create and update secrets and configs without rebuilding your image.
+* ==Self-healing==. The platform heals many problems: restarting failed containers, replacing and rescheduling containers as nodes die, killing containers that don’t respond to your user-defined health check, and waiting to advertise containers to clients until they’re ready.
+* ==Batch execution==. Manage your batch and Continuous Integration workloads and replace failed containers.
+* ==Automatic bin packing==. Automatically schedules containers based on resource requirements and other constraints.
+
+## What won’t Kubernetes do?
+Kubernetes can do a lot of cool, useful things. 
+But it’s just as important to consider what Kubernetes isn’t capable of:
+
+* It does not replace tools like Jenkins—so it will not build your application for you. (Not a PaaS)
+* It is not middleware—so it will not perform tasks that a middleware performs, such as message bus or caching, to name a few.
+* It does not care which logging solution is used. Have your app log to stdout, then you can collect the logs with whatever you want.
+* It does not care about your config language (e.g., JSON).
+
+K8s is **not opinionated** with these things simply to allow us to build our app the way we want, expose any type of information and collect that information however we want.
+
+## Kubernetes competitors
+Of course, Kubernetes isn’t the only tool on the market. There are a variety, including:
+
+* `Docker Compose`— good for staging but not production-ready.
+* `Docker Swarm` - Docker Swarm seems easy and quick to bootstrap ... but Docker Inc. has been purchased by Mirantis
+                   It's sufficient for small deployment
+* `Hashicorp Nomad`— allows for cluster management and scheduling but it does not solve secret and config management, service discover, and monitoring needs.
+* `Titus—Netflix’s` open-source orchestration platform doesn’t have enough people using it in production.
+
+Overall, Kubernetes offers the best out-of-the-box features along with countless third-party add-ons to easily extend its functionality.

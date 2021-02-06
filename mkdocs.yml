@@ -24,6 +24,7 @@ nav:
 
 
   - Day#2:
+    - Day1 - quick summary: day1Summary.md
     - Cloud - Introduction to Cloud: cloudIntroduction.md
     - Kubernetes - introduction: kubernetesIntroduction.md
     - Kubernetes - installation: kubernetesInstallation.md
@@ -31,6 +32,7 @@ nav:
     - Cloud - Google Cloud Platform: GoogleCloudPlatform.md
 
   - Day#3:
+    - Day2 - quick summary: day2Summary.md
     - Kubernetes - Advanced: kubernetesAdvanced.md
     - Evaluation - Quizz: quizz.md
 

@@ -14,8 +14,37 @@ The CLI tool to do all Virtualbox operations: {==VBoxManage==}
 VBoxManage list vms
 ```
 
+Running VMs :
+```
+vboxmanage list runningvms
+```
+
 !!! Info 
     Includes hidden VMs created by Vagrant
+
+## Start VM
+In headless mode
+```
+VBoxManage startvm worker1 --type headless
+```
+
+
+## Stop VM
+Clean way to stop machines:
+```
+vboxmanage controlvm worker1 poweroff soft
+```
+
+## Snapshot VM
+```
+VBoxManage snapshot worker1 take snap-worker1-initial --description="initial state"
+```
+
+## Restore a snapshot
+
+```
+VBoxManage snapshot { uuid|vmname } restore { snapshot-name }
+```
 
 ## Delete VM
 ```

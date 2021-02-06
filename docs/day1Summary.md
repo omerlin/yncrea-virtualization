@@ -79,6 +79,7 @@ git clone https://github.com/omerlin/yncrea-virtualization-labs.git
 cd yncrea-virtualization-labs
 ```
 Then you have to:
+
 * build the docker image
 * start the image (don't forget to expose the port)
 * test the image from a browser
@@ -124,11 +125,21 @@ services:
       MYSQL_HOST: db
   db:
     image: woahbase/alpine-mysql:x86_64
-    ports:
-      - "3306:3306"
+    expose:
+      - "3306"
     environment:
       MYSQL_ROOT_PWD: insecurebydefault
       MYSQL_USER_DB: myapp
       MYSQL_USER: myapp
       MYSQL_USER_PWD: mysecurepass
 ```
+* `line 4` : it's better to put the build image name
+* `line 9` : without this ==restart: on-failure==, it fails as the Node program start before the database up and running
+* `line 14`: this refers the ==db== container 
+* `line 17`: we ==expose== the port on the docker network not to ==external access==, like the "port" entry on `line 7`
+
+!!! Note
+    You may have remarked all the images are Alpine based images
+
+`LAB` Make it working ... There is a small trap :smile:
+

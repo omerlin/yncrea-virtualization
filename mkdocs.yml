@@ -40,6 +40,7 @@ nav:
     - chocolatey: cheatsheets/choco.md
     - virtualBoxManage: cheatsheets/vboxManage.md
     - docker: cheatsheets/docker.md
+    - kubernetes: cheatsheets/kubernetes.md
 
 theme:
   language: en

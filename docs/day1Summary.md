@@ -133,10 +133,12 @@ services:
       MYSQL_USER: myapp
       MYSQL_USER_PWD: mysecurepass
 ```
-* `line 4` : it's better to put the build image name
-* `line 9` : without this ==restart: on-failure==, it fails as the Node program start before the database up and running
-* `line 14`: this refers the ==db== container 
-* `line 17`: we ==expose== the port on the docker network not to ==external access==, like the "port" entry on `line 7`
+| Line        | Description                          |
+| ----------- | ------------------------------------ |
+| `line 4`    | it's better to put the build image name  |
+| `line 9`    | without this ==restart: on-failure==, it fails as the Node program start before the database up |
+| `line 14`   | this refers the `db` container |
+| `line 17`   | we ==expose== the port on the docker network not to ==external access==, like the "port" entry on `line 7` |
 
 !!! Note
     You may have remarked all the images are Alpine based images

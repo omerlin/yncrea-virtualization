@@ -4,6 +4,7 @@
 Link : https://github.com/omerlin/yncrea-virtualization-labs
 
 Schema:
+
 ![VIRTHW](./files/virtualization/twoboxes.png "Virtualized HW")
 
 !!! Note
@@ -17,7 +18,10 @@ Schema:
 * Snapshot of machine
 * Restore of machine snapshot
 
-`LABS` Take a snapshot of the 2 boxes
+`LABS` : update your VM
+* Update the Ubuntu OS
+* Stop the VMs
+* Take a snapshot of the 2 boxes
 
 ### Mobaxterm aliases reminder
 You can connect using:
@@ -65,5 +69,55 @@ IdentityFile ~/.ssh/worker2.pk
 ### Basic of Docker & Docker slimming
 Just a reminder of basics
 
+### `LABS` build and execute a small nodeJS application
+
+* Start worker1 for instance
+* You need to clone the link in one VM
+
+```
+git clone https://github.com/omerlin/yncrea-virtualization-labs.git
+cd yncrea-virtualization-labs
+```
+Then you have to:
+* build the docker image
+* start the image (don't forget to expose the port)
+* test the image from a browser
+
+### Pushing image to a repository 
+
 ### Docker compose
 We will redo a quick labs on it
+Still on worker1, go to the ==yncrea-virtualization-labs== git project
+
+First, you need to get [docker-compose binary](https://github.com/docker/compose/releases)
+You need to add this binary in your /usr/local/bin directory.
+
+Now, we will update the small nodejs application, to persist data in a Mysql database.
+
+Look ==carefully== at the `docker-compose.yml` file.
+
+```yaml linenums="1"
+version: "3"
+services:
+  web:
+    build: .
+    # image: omerlin/node-app:1.0
+    command: node index-db.js
+    ports:
+      - "3000:3000"
+    restart: on-failure
+    environment:
+      MYSQL_DATABASE: myapp
+      MYSQL_USER: myapp
+      MYSQL_PASSWORD: mysecurepass
+      MYSQL_HOST: db
+  db:
+    image: woahbase/alpine-mysql:x86_64
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PWD: insecurebydefault
+      MYSQL_USER_DB: myapp
+      MYSQL_USER: myapp
+      MYSQL_USER_PWD: mysecurepass
+```

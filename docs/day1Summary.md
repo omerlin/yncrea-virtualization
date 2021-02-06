@@ -85,6 +85,17 @@ Then you have to:
 
 ### Pushing image to a repository 
 
+!!! warning
+    You need to have an account on https://hub.docker.com
+
+```bash
+docker images
+# You get the image id you built locally
+docker tag <<image_id>>>> omerlin/nodeapp:v01
+docker login -u omerlin
+docker push omerlin/nodeapp:v01
+```
+
 ### Docker compose
 We will redo a quick labs on it
 Still on worker1, go to the ==yncrea-virtualization-labs== git project

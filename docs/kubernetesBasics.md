@@ -9,13 +9,14 @@
 If your application is ==stateless==, you can horizontally scale it
 
 * ==Staleless== = your application don't have a state, it doesn't write any local files/ keep local session
-* == Stateful== All traditional database (PostgreSQL, MySQL) are ==stateful==, they have database files that can't be split over multiple instance
+* ==Stateful== All traditional database (PostgreSQL, MySQL) are ==stateful==, they have database files that can't be split over multiple instance
 
 !!! Note
     This is a big difference with NoSQL database, like Cassandra, where scalability is possible - but the database is no more ACID
     See also the [CAP theorem]'(https://en.wikipedia.org/wiki/CAP_theorem)
 
 - Most Web application can be made stateless:
+
   * [x] Session management must be done outside the container
   * [x] Any files that need to be saved **can't be saved locally** on the container
   
@@ -31,20 +32,21 @@ If your application is ==stateless==, you can horizontally scale it
 - A "replication set" will **ensure** a number of ==pod replicas== will run at all time
 - A pod stared with the ==replica set== (replica controller) will automatically be replaced if they fail, get deleted or are terminated.  
 - Using a ==replicat set== is also recommended if you just want to ensure ==1 pod== is **always running**, even after reboot
+
   * [x] in that case, you configure with ==replica=1==
   * [x] You are sure that the pod is always running
   
 ## Deployment
 
-* Deployment declaration in Kubernetes allows you to do ==deployments== and ==**updates**== 
-* When doing a deployment, you define the ==state== of your application
+- Deployment declaration in Kubernetes allows you to do ==deployments== and ==**updates**== 
+- When doing a deployment, you define the ==state== of your application
   
   * then Kubernetes will ensure the cluster will match your ==desired state==
   * This would be difficult to achieve with Replication Controller / Replication Set
   
 So the Deployment Object is easier to use and givers more possibilities
 
-```yaml linenums=1 hl_lines="2 4"
+```yaml hl_lines="2 4"
 apiVersion: apps/v1
 kind: Deployment
 metadata:

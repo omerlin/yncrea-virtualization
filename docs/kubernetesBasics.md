@@ -75,7 +75,7 @@ spec:
 ### `LAB` deployment
 
 > We will use K3s for this lab
-> please follow the instruction on the page [] 
+> please follow [the instruction on the Kubernetes installation page](https://omerlin.github.io/yncrea-virtualization/kubernetesInstallation/#installation-on-our-vagrant-environment)
 
 
 

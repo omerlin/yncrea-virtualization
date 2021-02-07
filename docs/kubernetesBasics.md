@@ -16,8 +16,9 @@ If your application is ==stateless==, you can horizontally scale it
     See also the [CAP theorem]'(https://en.wikipedia.org/wiki/CAP_theorem)
 
 * Most Web application can be made stateless:
-** Session management must be done outside the container
-** Any files that need to be saved **can't be saved locally** on the container
+  
+  * Session management must be done outside the container
+  * Any files that need to be saved **can't be saved locally** on the container
   
 ### Scaling in Kubernetes
 
@@ -29,21 +30,22 @@ If your application is ==stateless==, you can horizontally scale it
     ==Replication== Set are used in background by ==deployment==
 
 * A "replication set" will **ensure** a number of ==pod replicas== will run at all time
-* A pod stared with the ==replica set== (replicat controller) will automatically be replaced if they fail, get deleted or are terminated.  
+* A pod stared with the ==replica set== (replica controller) will automatically be replaced if they fail, get deleted or are terminated.  
 * Using a ==replicat set== is also recommended if you just want to ensure ==1 pod== is **always running**, even after reboot
 ** in that case, you configure with ==replica=1==
 ** You are sure that the pod is always running
   
 ## Deployment
 
-* Deployment declaration in Kubernetes allows you to do ==deployments== and ==updates== 
+* Deployment declaration in Kubernetes allows you to do ==deployments== and ==**updates**== 
 * When doing a deployment, you define the ==state== of your application
-** then Kubernetes will ensure the cluster will match your ==desired state==
-** This would be difficult to achieve with Replication Controller / Replication Set
+  
+  * then Kubernetes will ensure the cluster will match your ==desired state==
+  * This would be difficult to achieve with Replication Controller / Replication Set
   
 So the Deployment Object is easier to use and givers more possibilities
 
-```yaml hl_lines="2 4"
+```yaml linenums=1 hl_lines="2 4"
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -71,6 +73,8 @@ spec:
 
 ### `LAB` deployment
 
+> We will use K3s for this lab
+> please follow the instruction on the page [] 
 
 
 

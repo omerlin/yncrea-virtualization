@@ -1,4 +1,5 @@
-# Introduction
+# Kubernetes installation
+## Introduction
 
 Kubernetes can be installed in many ways. 
 We will concentrate here on Private Homer Office installation.
@@ -10,11 +11,25 @@ As this is an incredibly changing world, we are testing some tools having in min
 | `k3s`       | Edge computing, ARM | microk8s also |
 | `rke`       | Production cluster | [kubeadm](https://kubernetes.io/fr/docs/setup/production-environment/tools/kubeadm/install-kubeadm/) |
  
-# Minikube
+!!! warning
+    After many test, it seems to me better and more reliable to rely on K3s for our hands-on
+    ==minikube== is also a good choice ... but experimented bad/strange behavior on my Windows 7 laptop
+
+
+## K3S from Rancher
+
+Quick Installation and architecture is here: [Lightweight Kubernetes](https://k3s.io/)
+Reference documentation is here: [Reference K3S documentation](https://rancher.com/docs/k3s/latest/en/)
+
+### Installation on our Vagrant environment
+
+
+
+## Minikube
 
 Installation link: [Minikube installation](https://kubernetes.io/docs/setup/minikube/)
 
-## Windows Installation
+##  (Minikube) Windows Installation
 
 ### Requirements
 You need virtualbox or Hyper-v
@@ -77,5 +92,4 @@ minikube   Ready    master   1m    v1.10.0
     We have an installed version 1.10.0 because we are ==not based on Windows 10 and Docker for Windows==
     So we suggest in that case to move to Linux installation
 
-# K3S from Rancher
 

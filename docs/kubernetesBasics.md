@@ -77,6 +77,71 @@ spec:
 > We will use K3s for this lab
 > please follow [the instruction on the Kubernetes installation page](https://omerlin.github.io/yncrea-virtualization/kubernetesInstallation/#installation-on-our-vagrant-environment)
 
+```
+git clone https://github.com/omerlin/yncrea-virtualization-labs.git
+```
+* First, test and validate the deployment
+
+!!! reminder
+    you need to use the `kubectl create -f ...` command
+
+* Second, you will create a new deployment name `helloworld-nginx.yml`
+* [x] using this image: karthequian/helloworld:latest
+* [x] Change the deployment name to helloworld-nginx-deployment
+
+Now check
+
+* Deploy it with the “kubectl create” command
+* Look at the deployment resource
+* Look at the replicasets behind
+* Look at the pods showing the labels
+
+Now have a look at : https://hub.docker.com/r/karthequian/helloworld/
+
+* Check for the different Tags
+
+==You will play with rolling update==
+
+But before, we need to expose the service
+
+```
+kubectl expose deployment helloworld-nginx-deployment --type=NodePort
+```
+
+You can look at the node port with the command:
+```
+kubectl get service
+```
+
+More details with : kubectl describe deployment …
+
+!!! note "on minikube"
+    To get the url:
+    ```minikube service helloworld-nginx-deployment --url```
+
+Look at the page with your browser
+
+!!! tip
+    Don't forget to forward the port :smile:
+
+Ok we will switch to another image tag: blue
+```
+kubectl set image deployment helloworld-nginx-deployment k8s-demo=karthequian/helloworld:blue
+```
+Check the rollout
+```
+kubectl rollout status deployment/helloworld-nginx-deployment
+```
+
+Check with your browser the image has been updated   
+
+No look at the rollout history
+
+Do an undo & check it has worked … 
+Look at it age with the ```kubectl get pods```
+
+RevisionHistoryLimit is set to 10, you may change it with a ```kubectl edit``` command 
+
 
 
 

@@ -39,7 +39,7 @@ kubectl expose pod <pod> --port=444 --name=frontend
 kubectl port-forward <pod> 8080
 ```
 
-*Attach to the pod
+* Attach to the pod
 ```
 kubectl attach <podname> -i
 ```

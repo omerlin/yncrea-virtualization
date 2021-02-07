@@ -133,8 +133,9 @@ services:
       MYSQL_USER: myapp
       MYSQL_USER_PWD: mysecurepass
 ```
-| Line        | Description                          |
-| ----------- | ------------------------------------ |
+
+| Line        | Description                              |
+| ----------- | ---------------------------------------- |
 | `line 4`    | it's better to put the build image name  |
 | `line 9`    | without this ==restart: on-failure==, it fails as the Node program start before the database up |
 | `line 14`   | this refers the `db` container |

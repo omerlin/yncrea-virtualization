@@ -9,16 +9,15 @@
 If your application is ==stateless==, you can horizontally scale it
 
 * ==Staleless== = your application don't have a state, it doesn't write any local files/ keep local session
-* == Stateful == All traditional database (PostgreSQL, MySQL) are ==stateful==, they have database files that can't be split over multiple instance
+* == Stateful== All traditional database (PostgreSQL, MySQL) are ==stateful==, they have database files that can't be split over multiple instance
 
 !!! Note
     This is a big difference with NoSQL database, like Cassandra, where scalability is possible - but the database is no more ACID
     See also the [CAP theorem]'(https://en.wikipedia.org/wiki/CAP_theorem)
 
-* Most Web application can be made stateless:
-  
-  * Session management must be done outside the container
-  * Any files that need to be saved **can't be saved locally** on the container
+- Most Web application can be made stateless:
+  * [x] Session management must be done outside the container
+  * [x] Any files that need to be saved **can't be saved locally** on the container
   
 ### Scaling in Kubernetes
 
@@ -29,11 +28,11 @@ If your application is ==stateless==, you can horizontally scale it
     whereas the Replication Controller was able only to use equality (like "card" == "GPU")
     ==Replication== Set are used in background by ==deployment==
 
-* A "replication set" will **ensure** a number of ==pod replicas== will run at all time
-* A pod stared with the ==replica set== (replica controller) will automatically be replaced if they fail, get deleted or are terminated.  
-* Using a ==replicat set== is also recommended if you just want to ensure ==1 pod== is **always running**, even after reboot
-** in that case, you configure with ==replica=1==
-** You are sure that the pod is always running
+- A "replication set" will **ensure** a number of ==pod replicas== will run at all time
+- A pod stared with the ==replica set== (replica controller) will automatically be replaced if they fail, get deleted or are terminated.  
+- Using a ==replicat set== is also recommended if you just want to ensure ==1 pod== is **always running**, even after reboot
+  * [x] in that case, you configure with ==replica=1==
+  * [x] You are sure that the pod is always running
   
 ## Deployment
 

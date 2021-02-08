@@ -46,7 +46,9 @@ VBoxManage startvm worker2 --type headless
 
 Then `ssh worker1`:
 ```
-vagrant@box1:~$ curl -sfL https://get.k3s.io | sh -
+# root
+sudo -i
+root@box1:~$ curl -sfL https://get.k3s.io | sh -
 [INFO]  Finding release for channel stable
 [INFO]  Using v1.20.2+k3s1 as release
 [INFO]  Downloading hash https://github.com/rancher/k3s/releases/download/v1.20.2+k3s1/sha256sum-amd64.txt
@@ -112,8 +114,8 @@ The installation is extremely straightforward
 You need to get the server authentication token (on box1) here: `/var/lib/rancher/k3s/server/node-token`
 
 
-
 ```
+sudo -i
 #
 #  token comes from worker1(master) file /var/lib/rancher/k3s/server/node-token
 #

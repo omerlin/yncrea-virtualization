@@ -15,6 +15,10 @@ As this is an incredibly changing world, we are testing some tools having in min
     After many test, it seems to me better and more reliable to rely on K3s for our hands-on
     ==minikube== is also a good choice ... but experimented bad/strange behavior on my Windows 7 laptop
 
+## Checking installation
+
+Link: [This is how to check Kubernes is really working](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-service/)
+
 
 ## K3S from Rancher
 

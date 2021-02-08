@@ -19,14 +19,15 @@ Schema:
 * Restore of machine snapshot
 
 `LABS` : update your VM
-* Update the Ubuntu OS
-* Stop the VMs
-* Take a snapshot of the 2 boxes
+
+   * Update the Ubuntu OS (`apt-get update`)
+   * Stop the VMs
+   * Take a snapshot of the 2 boxes
 
 ### Mobaxterm aliases reminder
 You can connect using:
 ```
-vagrant ssh worker 1
+vagrant ssh worker1
 ```
 
 File ~/.ssh/config to define a SSH alias

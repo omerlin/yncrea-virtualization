@@ -32,7 +32,8 @@ Link: [This is how to check Kubernes is really working](https://kubernetes.io/do
 ### Installation on our Vagrant environment
 
 !!! note
-    --we increased the number of core=2 and memory=2048m on worker1--
+    ~~we increased the number of core=2 and memory=2048m on worker1~~
+    
     ***WE CAN STOP DOCKER SERVICE***
 
 #### master installation

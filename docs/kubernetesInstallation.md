@@ -22,12 +22,12 @@ Link: [This is how to check Kubernes is really working](https://kubernetes.io/do
 
 ## K3S from Rancher
 
-Quick Installation and architecture is here: [Lightweight Kubernetes](https://k3s.io/)
-Reference documentation is here: [Reference K3S documentation](https://rancher.com/docs/k3s/latest/en/)
+* Quick Installation and architecture is here: [Lightweight Kubernetes](https://k3s.io/)
+* Reference documentation is here: [Reference K3S documentation](https://rancher.com/docs/k3s/latest/en/)
 
-[master k3s installation with vagrant video](https://www.youtube.com/watch?v=JLnjMCRLcCo)
-[worker k3s installation with vagrant video](https://www.youtube.com/watch?v=ahavAvGau_4)
-[K3S cluster local installation](https://tferdinand.net/creer-un-cluster-kubernetes-local-avec-vagrant/)
+* [master k3s installation with vagrant video](https://www.youtube.com/watch?v=JLnjMCRLcCo)
+* [worker k3s installation with vagrant video](https://www.youtube.com/watch?v=ahavAvGau_4)
+* [K3S cluster local installation](https://tferdinand.net/creer-un-cluster-kubernetes-local-avec-vagrant/)
 
 ### Installation on our Vagrant environment
 

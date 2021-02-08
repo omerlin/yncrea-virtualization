@@ -27,11 +27,13 @@ Reference documentation is here: [Reference K3S documentation](https://rancher.c
 
 [master k3s installation with vagrant video](https://www.youtube.com/watch?v=JLnjMCRLcCo)
 [worker k3s installation with vagrant video](https://www.youtube.com/watch?v=ahavAvGau_4)
+[K3S cluster local installation](https://tferdinand.net/creer-un-cluster-kubernetes-local-avec-vagrant/)
 
 ### Installation on our Vagrant environment
 
 !!! note
     --we increased the number of core=2 and memory=2048m on worker1--
+    ***WE CAN STOP DOCKER SERVICE***
 
 #### master installation
 

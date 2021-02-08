@@ -111,9 +111,13 @@ kube-system   traefik-6f9cbd9bd4-wmnh6                  1/1     Running     0   
 The installation is extremely straightforward
 You need to get the server authentication token (on box1) here: `/var/lib/rancher/k3s/server/node-token`
 
-export AUTH_TOKEN=K1038d9d2e6926949436a6ad38a691746e5b667a0e75ab8cc2f14925f2a3b2bbc6b::server:1ad2643d84c603277e8f0d51ff64d858
+
 
 ```
+#
+#  token comes from worker1(master) file /var/lib/rancher/k3s/server/node-token
+#
+export AUTH_TOKEN=K1038d9d2e6926949436a6ad38a691746e5b667a0e75ab8cc2f1492
 root@box2:~# curl -sfL https://get.k3s.io | K3S_TOKEN=$AUTH_TOKEN K3S_URL=https://10.0.3.6:6443 sh -
 echo "    --flannel-iface 'eth1'">/etc/systemd/system/k3s-agent.service
 systemctl daemon-reload

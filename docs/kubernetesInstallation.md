@@ -25,10 +25,15 @@ Link: [This is how to check Kubernes is really working](https://kubernetes.io/do
 Quick Installation and architecture is here: [Lightweight Kubernetes](https://k3s.io/)
 Reference documentation is here: [Reference K3S documentation](https://rancher.com/docs/k3s/latest/en/)
 
+[master k3s installation with vagrant video](https://www.youtube.com/watch?v=JLnjMCRLcCo)
+[worker k3s installation with vagrant video](https://www.youtube.com/watch?v=ahavAvGau_4)
+
 ### Installation on our Vagrant environment
 
 !!! note
-    we increased the number of core=2 and memory=2048m on worker1
+    --we increased the number of core=2 and memory=2048m on worker1--
+
+#### master installation
 
 ```
 VBoxManage snapshot worker1 restore snap-worker1-initial
@@ -61,6 +66,22 @@ vagrant@box1:~$ sudo k3s kubectl get node
 NAME   STATUS   ROLES                  AGE   VERSION
 box1   Ready    control-plane,master   55s   v1.20.2+k3s1
 ```
+
+!!! important
+    The vagrant installation deploy the fixed NAT address on eth0
+    ... but the communication interface is ==eth1== (10.0.3.1/24)
+    so we need to tell to the CNI that the real network is on eth1
+
+To do this, we have to update the k3s service `/etc/systemd/system/k3s.service`
+and add this :
+```
+ExecStart=/usr/local/bin/k3s \
+    server \
+    --flannel-iface 'eth1'
+systemctl daemon-reload
+systemctl restart k3s
+```
+
 To get rights as vagrant user:
 ```
 vagrant@box1:~$ export KUBECONFIG="/etc/rancher/k3s/k3s.yaml"
@@ -81,6 +102,28 @@ kube-system   traefik-6f9cbd9bd4-wmnh6                  1/1     Running     0   
 !!! warning
     There is currently an issue to create an agent - and so create a k3scluster
     So we will work on a standalone node.
+
+#### woker node installation
+
+The installation is extremely straightforward
+You need to get the server authentication token (on box1) here: `/var/lib/rancher/k3s/server/node-token`
+
+export AUTH_TOKEN=K1038d9d2e6926949436a6ad38a691746e5b667a0e75ab8cc2f14925f2a3b2bbc6b::server:1ad2643d84c603277e8f0d51ff64d858
+
+```
+root@box2:~# curl -sfL https://get.k3s.io | K3S_TOKEN=$AUTH_TOKEN K3S_URL=https://10.0.3.6:6443 sh -
+echo "    --flannel-iface 'eth1'">/etc/systemd/system/k3s-agent.service
+systemctl daemon-reload
+systemctl restart k3s-agent
+```
+
+At the end, you should see this:
+```
+root@box1:~# sudo k3s kubectl get node -o wide
+NAME   STATUS   ROLES                  AGE   VERSION        INTERNAL-IP   EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION      CONTAINER-RUNTIME
+box2   Ready    <none>                 13m   v1.20.2+k3s1   10.0.3.7      <none>        Ubuntu 18.04.3 LTS   4.15.0-58-generic   containerd://1.4.3-k3s1
+box1   Ready    control-plane,master   27m   v1.20.2+k3s1   10.0.3.6      <none>        Ubuntu 18.04.3 LTS   4.15.0-58-generic   containerd://1.4.3-k3s1
+```
 
 ## RKE from Rancher
 

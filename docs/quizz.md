@@ -26,8 +26,8 @@ This means you will have to create a `Dockerfile`.
     If you know python it's quite easy. 
     You can try to launch the application locally with Python for instance.
 
-* That you will publish this container to your own account on hub.docker.com
-* Then you will deploy this container as a pod on your K3S cluster.
+* Then you will publish this container to your own account on http://hub.docker.com
+* Then you create the manifest Yaml file to deploy this container as a pod on your K3S cluster.
 * Having done this you will need to access the service port to launch a Quizz.
 
 Something like:

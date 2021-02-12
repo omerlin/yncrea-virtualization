@@ -29,11 +29,11 @@ nav:
     - Kubernetes - introduction: kubernetesIntroduction.md
     - Kubernetes - installation: kubernetesInstallation.md
     - Kubernetes - basics: kubernetesBasics.md
-    - Cloud - Google Cloud Platform: GoogleCloudPlatform.md
 
   - Day#3:
     - Day2 - quick summary: day2Summary.md
     - Kubernetes - Advanced: kubernetesAdvanced.md
+    - Cloud - Google Cloud Platform: GoogleCloudPlatform.md
     - Evaluation - Quizz: quizz.md
 
   - Cheatsheets:

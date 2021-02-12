@@ -121,7 +121,9 @@ sudo -i
 #
 export AUTH_TOKEN=K1038d9d2e6926949436a6ad38a691746e5b667a0e75ab8cc2f1492
 root@box2:~# curl -sfL https://get.k3s.io | K3S_TOKEN=$AUTH_TOKEN K3S_URL=https://10.0.3.6:6443 sh -
-echo "    --flannel-iface 'eth1'">/etc/systemd/system/k3s-agent.service
+#
+# post-install: TO NOT FORGET
+# echo "    --flannel-iface 'eth1'">>/etc/systemd/system/k3s-agent.service
 systemctl daemon-reload
 systemctl restart k3s-agent
 ```

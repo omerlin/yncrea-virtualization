@@ -6,14 +6,18 @@ Topics discussed
 - Virtualization
     * Practical on Virtualbox with Vagrant 
 - Cloud ( Vocabulary / terms / Openstack / Kubernetes) 
-- Docker & Kubernetes
+- Docker
     * Docker build & slimming
     * Docker push in public repository
     * Docker compose
         * on a complex deployment
         * on a simple based on nodejs + mySQL
-    * K3S master/slave deployment 
-    * Not done: RKE & minikube
+- Kubernetes
+    * Installation
+        * Rancher K3S cluster with a master/slave deployment
+        * Not done: RKE & minikube
+    * Deployment
+        * Simple application nodeJS + DB MySQL
 
 ## Material
 

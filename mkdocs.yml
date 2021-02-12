@@ -39,6 +39,7 @@ nav:
   - Cheatsheets:
     - chocolatey: cheatsheets/choco.md
     - virtualBoxManage: cheatsheets/vboxManage.md
+    - vagrant: cheatsheets/vagrant.md
     - docker: cheatsheets/docker.md
     - kubernetes: cheatsheets/kubernetes.md
 

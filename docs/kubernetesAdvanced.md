@@ -179,5 +179,20 @@ spec:
           serviceName: helloworld-svc
           servicePort: 3000
 ```
-
+Routing rules will now be visible on Traefik’s dashboard.
 ![TRAEFIKRULE](./files/kubernetes/traefic_admin.png "Traefik rule")
+
+#### Accessing the service
+
+In fact there is no need to declare a service in front of Traefic, 
+the ingress HTTP traffic is already exposed on ALL K3S cluster by a load balancer
+
+```
+vagrant@box1:~/yncrea-virtualization-labs/kubernetes/ingres$ kubectl -n kube-system get svc traefik
+NAME      TYPE           CLUSTER-IP     EXTERNAL-IP   PORT(S)                      AGE
+traefik   LoadBalancer   10.43.50.216   10.0.3.6      80:31367/TCP,443:31319/TCP   7h48m
+```
+
+So by accessing externally to port 31367 we can reach the service thru the ingress controller.
+The External-ip here is not routable ... sdo you have to map port at the VirtualBox level.
+

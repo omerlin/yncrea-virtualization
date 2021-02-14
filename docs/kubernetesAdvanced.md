@@ -92,7 +92,7 @@ The ingress controller is delegated the responsibility of taking incoming traffi
 |Ingress Controller| An application that is responsible for fulfilling Ingress requests.|
 |Service| A Kubernetes Service is an abstract way to expose an application running in a set of Pods. Implementations of a Service include NodePort and ClusterIP.|
 
-### Creating the K3S ingress resources
+### Configuring Traefik dashboard
 K3s creates a `Traefik` deployment for the Ingress Controller, but by default, the dashboard is disabled. 
 Running `Traefik` with the dashboard enabled materializes the concept of routing rules
 
@@ -125,5 +125,59 @@ Running `Traefik` with the dashboard enabled materializes the concept of routing
         you need to use a SSH forward like
         Localforward 8089 127.0.0.1:8089
 
+### Configure Traefik Routing Rules
 
-    
+From the Git resource https://github.com/omerlin/yncrea-virtualization-labs.git, go to Kubernetes Ingress directory
+
+#### Create a deployment
+
+This is the helloworld deployment we have seen Day 2.
+```
+kubectl create -f deployment.yml
+```
+
+#### Create a service
+Instead of using the `kubectl expose` command, we declare the service explicitly.
+File `service.yml`
+```yaml hl_lines=11
+apiVersion: v1
+kind: Service
+metadata:
+  name: helloworld-svc
+spec:
+  ports:
+    - name: http
+      port: 3000
+  selector:
+    # apply service to any pod with label app: helloworld
+    app: helloworld
+```
+!!! note
+    The service mapp application with the label: `app: helloworld`
+
+#### Create a service
+
+The Ingress configures Traefik with routing rules. 
+This minimal example will use a path based routing rule. 
+A path based routing rule is evaluated by inspecting the incoming url’s context. 
+Here, the path is / with pathType: Prefix. The path / captures all incoming traffic
+
+```
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: helloworld-ingress
+  annotations:
+    kubernetes.io/ingress.class: traefik
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          serviceName: helloworld-svc
+          servicePort: 3000
+```
+
+![TRAEFIKRULE](./files/kubernetes/traefic_admin.png "Traefik rule")

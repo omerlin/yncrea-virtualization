@@ -106,5 +106,24 @@ Running `Traefik` with the dashboard enabled materializes the concept of routing
     [api]
     dashboard = true
     ```
-                
+    You need to restart Traefik:
+    ```
+    kubectl -n kube-system scale deploy traefik --replicas 0
+    kubectl -n kube-system scale deploy traefik --replicas 1
+    ```
+    You must expose the Dashboard port:
+    ```
+    kubectl -n kube-system port-forward deployment/traefik 8089:8080
+    ```
+    !!! Note
+        Port forward is another method to access to an application inside the cluster
+        Open the dashboard in your browser at http://localhost:8089. 
+        our routing rules will show up on this dashboard as you create Ingress.
+        
+    !!! warning 
+        The port forward of port in Network virtualbox will not work in that case,
+        you need to use a SSH forward like
+        Localforward 8089 127.0.0.1:8089
+
+
     

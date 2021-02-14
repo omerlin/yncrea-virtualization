@@ -115,15 +115,15 @@ Running `Traefik` with the dashboard enabled materializes the concept of routing
     ```
     kubectl -n kube-system port-forward deployment/traefik 8089:8080
     ```
-    !!! Note
-        Port forward is another method to access to an application inside the cluster
-        Open the dashboard in your browser at http://localhost:8089. 
-        our routing rules will show up on this dashboard as you create Ingress.
+!!! Note
+    Port forward is another method to access to an application inside the cluster
+    Open the dashboard in your browser at http://localhost:8089. 
+    our routing rules will show up on this dashboard as you create Ingress.
         
-    !!! warning 
-        The port forward of port in Network virtualbox will not work in that case,
-        you need to use a SSH forward like
-        Localforward 8089 127.0.0.1:8089
+!!! warning 
+    The port forward of port in Network virtualbox will not work in that case,
+    you need to use a SSH forward like
+    Localforward 8089 127.0.0.1:8089
 
 ### Configure Traefik Routing Rules
 
@@ -196,3 +196,24 @@ traefik   LoadBalancer   10.43.50.216   10.0.3.6      80:31367/TCP,443:31319/TCP
 So by accessing externally to port 31367 we can reach the service thru the ingress controller.
 The External-ip here is not routable ... sdo you have to map port at the VirtualBox level.
 
+## `LABS`: Deploying with Traefik
+
+This Lab will deploy other routes on Traefik with another Nginx POD.
+The code is still located here: https://github.com/omerlin/yncrea-virtualization-labs.git
+Go to the sub-directory: kubernetes/ingressing_with_k3s-master
+
+Objectives are to be able to follow the instructions of this tutorial by yourself.
+The tutorial is about [Directing Kubernetes traffic with Traefik](https://opensource.com/article/20/3/kubernetes-traefik#comments)
+
+This will show you how to redirect based on path.
+!!! important
+    you have to take care at the config maps ... as pods need it in their configuration
+    you should know also the command: `kubectl delete -f ...` to remove a 
+
+## `LABS`: Simple hello-python deployment
+
+Comes from: https://kubernetes.io/blog/2019/07/23/get-started-with-kubernetes-using-python/
+
+The idea is not to follow blindly what you see there ...
+First, from what you have learned so far ... what seems bad for you ???
+Second, this will not work and you will have to adapt ... could you figure out why ?

@@ -17,6 +17,7 @@ Topics discussed
         * Rancher K3S cluster with a master/slave deployment
         * Not done: RKE & minikube
     * Deployment
+        * debugging a kubernetes installation
         * Simple application nodeJS + DB MySQL
 
 ## Material

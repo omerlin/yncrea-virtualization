@@ -40,6 +40,11 @@ vboxmanage controlvm worker1 poweroff soft
 VBoxManage snapshot worker1 take snap-worker1-initial --description="initial state"
 ```
 
+##List snapshot
+```
+VBoxManage snapshot worker1 list
+```
+
 ## Restore a snapshot
 
 ```

@@ -134,11 +134,11 @@ kubectl create -f deployment.yml
 ```
 
 #### Create a service
-Instead of using the `kubectl expose` command, we declare the service explicitly.\
+Instead of using the `kubectl expose` command, we declare the service explicitly.  
 
-File `service.yml`:\
+File `service.yml`:  
 
-```yaml hl_lines=11
+```yaml
 apiVersion: v1
 kind: Service
 metadata:
@@ -157,10 +157,10 @@ spec:
 
 #### Create a service
 
-The Ingress configures Traefik with routing rules. 
-This minimal example will use a path based routing rule. 
-A path based routing rule is evaluated by inspecting the incoming url’s context. 
-Here, the path is / with pathType: Prefix. The path / captures all incoming traffic
+The Ingress configures Traefik with routing rules.  
+This minimal example will use a path based routing rule.   
+A path based routing rule is evaluated by inspecting the incoming url’s context.   
+Here, the path is / with pathType: Prefix. The path / captures all incoming traffic  
 
 ```yaml
 apiVersion: extensions/v1beta1

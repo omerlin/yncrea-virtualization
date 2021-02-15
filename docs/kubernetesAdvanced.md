@@ -117,14 +117,10 @@ Running `Traefik` with the dashboard enabled materializes the concept of routing
     kubectl -n kube-system port-forward deployment/traefik 8089:8080
     ```
 !!! Note
-    Port forward is another method to access to an application inside the cluster
-    Open the dashboard in your browser at http://localhost:8089. 
+    Port forward is another method to access to an application inside the cluster\
+    Open the dashboard in your browser at http://localhost:8089. \
     our routing rules will show up on this dashboard as you create Ingress.
         
-!!! warning 
-    The port forward of port in Network virtualbox will not work in that case,
-    you need to use a SSH forward like
-    Localforward 8089 127.0.0.1:8089
 
 ### Configure Traefik Routing Rules
 
@@ -138,8 +134,10 @@ kubectl create -f deployment.yml
 ```
 
 #### Create a service
-Instead of using the `kubectl expose` command, we declare the service explicitly.
-File `service.yml`
+Instead of using the `kubectl expose` command, we declare the service explicitly.\
+
+File `service.yml`:\
+
 ```yaml hl_lines=11
 apiVersion: v1
 kind: Service
@@ -153,6 +151,7 @@ spec:
     # apply service to any pod with label app: helloworld
     app: helloworld
 ```
+
 !!! note
     The service mapp application with the label: `app: helloworld`
 
@@ -163,7 +162,7 @@ This minimal example will use a path based routing rule.
 A path based routing rule is evaluated by inspecting the incoming url’s context. 
 Here, the path is / with pathType: Prefix. The path / captures all incoming traffic
 
-```
+```yaml
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
@@ -180,6 +179,7 @@ spec:
           serviceName: helloworld-svc
           servicePort: 3000
 ```
+
 Routing rules will now be visible on Traefik’s dashboard.
 ![TRAEFIKRULE](./files/kubernetes/traefic_admin.png "Traefik rule")
 
@@ -188,7 +188,7 @@ Routing rules will now be visible on Traefik’s dashboard.
 In fact there is no need to declare a service in front of Traefic, 
 the ingress HTTP traffic is already exposed on ALL K3S cluster by a load balancer
 
-```
+```bash
 vagrant@box1:~/yncrea-virtualization-labs/kubernetes/ingres$ kubectl -n kube-system get svc traefik
 NAME      TYPE           CLUSTER-IP     EXTERNAL-IP   PORT(S)                      AGE
 traefik   LoadBalancer   10.43.50.216   10.0.3.6      80:31367/TCP,443:31319/TCP   7h48m
@@ -207,6 +207,7 @@ Objectives are to be able to follow the instructions of this tutorial by yoursel
 The tutorial is about [Directing Kubernetes traffic with Traefik](https://opensource.com/article/20/3/kubernetes-traefik#comments)
 
 This will show you how to redirect based on path.
+
 !!! important
     you have to take care at the config maps ... as pods need it in their configuration
     you should know also the command: `kubectl delete -f ...` to remove a 

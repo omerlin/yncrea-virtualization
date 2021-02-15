@@ -227,7 +227,7 @@ sudo apt-get install -y python-pip
 
 !!! attention
     As you are under K3S with default configuration, you **cannot use local docker image**
-    The only solution iqs to push image in a public repository (hib.docker.com for example)
+    The only solution iqs to push image in a public repository (hub.docker.com for example)
     and then in the Kubernetes Yaml deployment file, change the imagePullPolicy to
     ```
     imagePullPolicy: IfNotPresent

@@ -216,6 +216,6 @@ This will show you how to redirect based on path.
 
 Comes from: https://kubernetes.io/blog/2019/07/23/get-started-with-kubernetes-using-python/
 
-The idea is not to follow blindly what you see there ...
-First, from what you have learned so far ... what seems bad for you ???
+The idea is not to follow blindly what you see there ...  
+First, from what you have learned so far ... **what seems bad for you** ???  
 Second, this will not work and you will have to adapt ... could you figure out why ?

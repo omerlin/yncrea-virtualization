@@ -65,7 +65,7 @@ In this example, you see the port is `31123`
 Ok - you are almost done ...
 You need first get the `admin-user` authentication **token** by this command:
 ```
-kubectl get svc kubernetes-dashboard -n kubernetes-dashboard
+sudo k3s kubectl -n kubernetes-dashboard describe secret admin-user-token | grep ^token
 ```
 There are standard authentication token as you can see on https://jwt.io/
 You so can see the kubernetes dashboard opening your browser to `https://localhost:31123`

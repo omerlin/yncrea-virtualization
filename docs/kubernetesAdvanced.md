@@ -219,3 +219,17 @@ Comes from: https://kubernetes.io/blog/2019/07/23/get-started-with-kubernetes-us
 The idea is not to follow blindly what you see there ...  
 First, from what you have learned so far ... **what seems bad for you** ???  
 Second, this will not work and you will have to adapt ... could you figure out why ?
+
+If you want to the the python code directly, you need to have pip to install dependencies:
+```
+sudo apt-get install -y python-pip
+```
+
+!!! attention
+    As you are under K3S with default configuration, you **cannot use local docker image**
+    The only solution iqs to push image in a public repository (hib.docker.com for example)
+    and then in the Kubernetes Yaml deployment file, change the imagePullPolicy to
+    ```
+    imagePullPolicy: IfNotPresent
+    ```
+

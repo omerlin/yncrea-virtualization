@@ -46,7 +46,8 @@ subjects:
 ```
 To create the resources :
 ```
-create -f admin-service-user.yaml admin-user-role.yaml
+kubectl create -f admin-service-user.yaml admin-user-role.yaml
+kubectl create -f admin-service-user.yaml
 ```
 This is Ok, but how to see the dashboard ? 
 One solution we have seen so far is to expose the service port with the `NodePort`.

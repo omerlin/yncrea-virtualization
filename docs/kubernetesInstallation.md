@@ -125,10 +125,11 @@ root@box2:~# curl -sfL https://get.k3s.io | K3S_TOKEN=$AUTH_TOKEN K3S_URL=https:
 # post-install: TO NOT FORGET
 # echo "    --flannel-iface 'eth1'">>/etc/systemd/system/k3s-agent.service
 systemctl daemon-reload
-systemctl restart k3s-agent
+systemctl stop k3s-agent
+systemctl start k3s-agent
 ```
 
-At the end, you should see this:
+At the end on **the master node** (box1), you should see this:
 ```
 root@box1:~# sudo k3s kubectl get node -o wide
 NAME   STATUS   ROLES                  AGE   VERSION        INTERNAL-IP   EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION      CONTAINER-RUNTIME

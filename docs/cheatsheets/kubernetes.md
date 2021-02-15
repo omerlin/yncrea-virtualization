@@ -5,7 +5,7 @@
 The most complete reference :
   
 * [Official kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
-* [My favourite du debug kubernetes services](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-service/)
+* [My favourite to debug kubernetes services](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-service/)
 
 ## Condensed cheat sheet
 

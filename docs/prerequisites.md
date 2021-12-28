@@ -5,10 +5,16 @@ All the pre-requisites to follow the labs
 ## System pre-requisites
 You need to be on Windows (7+), Linux or MacOS.
 
-VT-x/AMD-v virtualization must be enabled in BIOS
+**VT-x/AMD-v virtualization must be enabled in BIOS**
+
+### check with Windows 10 task manager
+![VTENABLED](./files/other/virtualization_enabled.png "Cloud Computing scope")
+
+!!! Note
+    We will need Windows 10 for Wsl2 and Docker Desktop in future sections
 
 !!! Warning
-    You need the Administrative rights to be able to install the software
+    You need the Administrative rights to be able to install software  
     Don't forget to switch to admin command on Windows
 
 ## Windows recommended pre-requisite
@@ -47,5 +53,5 @@ We do recommend also to install git, to clone source on your computer.
 ```
 
 !!! Note
-    We advise installing virtualbox manually instead of using chocolatey
-    [Virtualbox download](https://www.virtualbox.org/wiki/Downloads)
+    We advise installing virtualbox manually instead of using chocolatey  
+    Url: [Virtualbox download](https://www.virtualbox.org/wiki/Downloads)

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="132px" preserveAspectRatio="none" style="width:100px;height:132px;background:#FFFFFF;" version="1.1" viewBox="0 0 100 132" width="100px" zoomAndPan="magnify"><defs><filter height="300%" id="f1tcf5ivdjka3f" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="19" x2="19" y1="40.2969" y2="89.4297"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="76" x2="76" y1="40.2969" y2="89.4297"/><rect fill="#FEFECE" filter="url(#f1tcf5ivdjka3f)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="24" x="5" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="10" x="12" y="24.9951">A</text><rect fill="#FEFECE" filter="url(#f1tcf5ivdjka3f)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="24" x="5" y="88.4297"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="10" x="12" y="108.4248">A</text><rect fill="#FEFECE" filter="url(#f1tcf5ivdjka3f)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="24" x="62" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="10" x="69" y="24.9951">B</text><rect fill="#FEFECE" filter="url(#f1tcf5ivdjka3f)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="24" x="62" y="88.4297"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="10" x="69" y="108.4248">B</text><polygon fill="#A80036" points="64,67.4297,74,71.4297,64,75.4297,68,71.4297" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="19" x2="70" y1="71.4297" y2="71.4297"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="33" x="26" y="66.3638">test2</text><!--MD5=[b4ee2b5e63fd9ccc72456fa4cbf6452b]
+@startuml
+A -> B: test2
+@enduml
+
+PlantUML version 1.2021.17beta4(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

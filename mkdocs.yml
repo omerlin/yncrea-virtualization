@@ -93,7 +93,7 @@ extra:
     - icon: fontawesome/brands/docker
       link: https://hub.docker.com/repository/docker/omerlin/srvquizz
     - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/in/olivier-merlin-90258a6/
+      link: https://www.linkedin.com/in/olivier-merlin-90258a6
 
 # Google Analytics
 google_analytics:

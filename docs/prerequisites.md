@@ -18,7 +18,7 @@ You need to be on Windows (7+), Linux or MacOS.
     Don't forget to switch to admin command on Windows
 
 ## Windows recommended pre-requisite
-We recommend installing {==chocolatey==} Windows package manager to make it easy. \
+We recommend installing {==chocolatey==} Windows package manager to make it easy.  
 Read this [Why chocolatey](https://docs.chocolatey.org/en-us/why)
 
 If you are convinced, please follow this: [Install chocolatey]( https://chocolatey.org/courses/installation/installing?method=installing-chocolatey#cmd )

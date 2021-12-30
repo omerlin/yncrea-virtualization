@@ -94,8 +94,3 @@ extra:
       link: https://hub.docker.com/repository/docker/omerlin/srvquizz
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/olivier-merlin-90258a6
-
-# Google Analytics
-google_analytics:
-  - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
-  - auto

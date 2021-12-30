@@ -7,18 +7,17 @@ The Wsl2 installation depends on your Windows version.
 
 Another example: 
 
-```plantuml
-
-@startuml
+```plantuml:test1
 A -> B: test1
-@enduml
 ```
 
+![](./plantuml/generated/test1.svg)
 
-```plantuml
-
+```plantuml:test2
 A -> B: test2
 ```
+
+![](./plantuml/generated/test2.svg)
 
 
 ```plantuml:md-sample-class
@@ -29,7 +28,7 @@ Class07 .. Class08
 Class09 -- Class10
 ```
 
-![](./md-sample-class.svg)
+![](./plantuml/generated/md-sample-class.svg)
 
 ```javascript
 function dummy() {

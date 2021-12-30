@@ -20,11 +20,16 @@ A -> B: test1
 A -> B: test2
 ```
 
-```plantuml@gantt
 
-[Prototype design] lasts 15 days
-[Test prototype] lasts 10 days
+```plantuml:md-sample-class
+Class01 <|-- Class02
+Class03 *-- Class04
+Class05 o-- Class06
+Class07 .. Class08
+Class09 -- Class10
 ```
+
+![](./md-sample-class.svg)
 
 ```javascript
 function dummy() {

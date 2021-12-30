@@ -1,5 +1,7 @@
 # Windows prerequisites
 
+LF issue ?
+
 The Wsl2 installation depends on your Windows version.
 
 ![WINDOWS10](./plantuml/generated/mindmap.svg "Mindmap")

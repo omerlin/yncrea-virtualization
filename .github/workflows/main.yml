@@ -23,6 +23,15 @@ jobs:
       - name: Checkout master branch
         uses: actions/checkout@v2
 
+      - name: plantuml
+        id: plantuml
+        uses: grassedge/generate-plantuml-action@v1.5
+        with:
+          path: example
+          message: "Render PlantUML files"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
       - name: Deploy docs
         uses: mhausenblas/mkdocs-deploy-gh-pages@1.16
         env:

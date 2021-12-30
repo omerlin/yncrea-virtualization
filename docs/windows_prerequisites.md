@@ -7,18 +7,21 @@ The Wsl2 installation depends on your Windows version.
 
 Another example: 
 
-```plantuml:test-1
+```plantuml
+
 @startuml
 A -> B: test1
 @enduml
 ```
 
 
-```plantuml:test_2
+```plantuml
+
 A -> B: test2
 ```
 
-```plantuml@gantt:test.4
+```plantuml@gantt
+
 [Prototype design] lasts 15 days
 [Test prototype] lasts 10 days
 ```

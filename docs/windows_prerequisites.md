@@ -1,4 +1,9 @@
-@startmindmap
+# Windows prerequisites
+
+![WINDOWS10](./plantuml/generated/mindmap.png "Mindmap")
+
+```plantuml
+@startuml mindmap
 * Debian
 ** Ubuntu
 *** Linux Mint
@@ -11,4 +16,5 @@
 ** Raspbian with a very long name
 *** <s>Raspmbc</s> => OSMC
 *** <s>Raspyfi</s> => Volumio
-@endmindmap
+@enduml
+```

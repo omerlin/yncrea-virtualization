@@ -11,13 +11,18 @@ I let you read around this topic in Microsoft official documentations (and other
 
 
 !!! tip
-    We configure WSL 2 to benefit from Docker Desktop
-    While this is a cool feature and really simplifies a lot development it has some limitations too ... 
+    We configure WSL 2 to benefit from Docker Desktop  
+    While this is a cool feature and really simplifies a lot development it has some limitations too ...   
     This is why we will not focus only on it but first work on VirtualBox. 
 
 !!! warning
-    The Linux OS you install do not start a full subsystem (no init nor systemd scheduler)
-    There are workaround of course - but this is something to put in place ( supervisord for instance )
+    The Linux OS you install do not start a full subsystem (no init nor systemd scheduler)  
+    There are workaround of course - but this is something to put in place ( supervisord for instance )  
+    But there are plenty cool usages like:
+    - configuration tool like **"ansible"** for instance (See later)
+    - bash scripting (faster than git-bash)
+    - development, compiling, image building (packer)
+    - ...
 
 The Wsl2 installation depends on your Windows version.
 
@@ -28,8 +33,9 @@ winver
 ```
 
 !!! warning
-    Take care to use official documentations whenever you can because documentations and versions release are moving fast !
-    And you have a lot of "bad" or "obsolete" information 
+    Take care to use official documentations whenever you can because documentations and versions release are moving fast !  
+    And you have a lot of "bad" or "obsolete" information.
+    (The reverse is true also - sometimes official doumentation is unclear :smile) 
 
 ## if recent distribution
 
@@ -47,10 +53,10 @@ You need at least: Windows 10 version 1909 (Build 18363 and higher)
 ## Windows features activation
 
 You can see windows features enabled in settings:
-![windows-features](./files/other/windows-features.png "windows features visualization")
+![windows-features](../files/other/windows-features.png "windows features visualization")
 
 Hyper-V services must be activated:
-![windows-hyperV-services](./files/other/HyperV-Services.png "HyperV-services used by WSL2")
+![windows-hyperV-services](../files/other/HyperV-Services.png "HyperV-services used by WSL2")
 
 WSL2 is activated:
-![windows-WSL2](./files/other/WSL2-features.png "WSL2 feature is activated")
+![windows-WSL2](../files/other/WSL2-features.png "WSL2 feature is activated")

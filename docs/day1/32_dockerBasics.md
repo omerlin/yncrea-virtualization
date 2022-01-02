@@ -63,7 +63,7 @@ We will not enter in deep on complex options ...
 
 ## Data Storage
 
-![DOCKERLAYER](./files/virtualization/docker_image_layers.png "Docker image layers")
+![DOCKERLAYER](../files/virtualization/docker_image_layers.png "Docker image layers")
 
 The most common storage drivers are AUFS, Overlay/Overlay2, Devicemapper, Btrfs, and ZFS. 
 All storage drivers can be categorized into three different types:
@@ -74,7 +74,7 @@ Union filesystems           | AUFS, Overlay, Overlay2
 Snapshotting filesystems    | Btrfs, ZFS
 Copy-on-write block devices | Devicemapper
 
-![DOCKERLAYER](./files/virtualization/docker_container_images.png "Docker image layers")
+![DOCKERLAYER](../files/virtualization/docker_container_images.png "Docker image layers")
 
 ### Bind mounts
 
@@ -201,4 +201,4 @@ ENTRYPOINT ["/go/bin/hello"]
 * My Dockerfile becomes a CI tool 
 * ... and the size is reduced to the max !
 
-![DOCKERSLIMMING](./files/virtualization/docker_images_slimming.png "Docker image slimming")
+![DOCKERSLIMMING](../files/virtualization/docker_images_slimming.png "Docker image slimming")

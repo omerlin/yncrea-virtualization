@@ -3,7 +3,7 @@ You are now under pressure ...but don't panic ...
 This is not difficult (less than what we have seen so far)
 
 ## Architecture
-![K8SExam](./files/kubernetes/quizzExam.png "Quizz Exam")
+![K8SExam](../files/kubernetes/quizzExam.png "Quizz Exam")
 
 ## Your examination
 

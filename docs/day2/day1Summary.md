@@ -5,7 +5,7 @@ Link : https://github.com/omerlin/yncrea-virtualization-labs
 
 Schema:
 
-![VIRTHW](./files/virtualization/twoboxes.png "Virtualized HW")
+![VIRTHW](../files/virtualization/twoboxes.png "Virtualized HW")
 
 !!! Note
     Drawing done with https://app.diagrams.net/

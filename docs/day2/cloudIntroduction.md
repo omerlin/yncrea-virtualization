@@ -6,7 +6,7 @@ This is more an awareness and vocabulary presentation.
 
 Different type of Cloud computing :
 
-![CLOUDINTRO](./files/virtualization/cloud_computing.png "Cloud Computing")
+![CLOUDINTRO](../files/virtualization/cloud_computing.png "Cloud Computing")
 
 ## Services in the Cloud
 
@@ -16,15 +16,15 @@ Different type of Cloud computing :
 * Rapid elasticity
 * Measured service
 
-![CLOUDSCOPE](./files/virtualization/cloud_computing2.png "Cloud Computing scope")
+![CLOUDSCOPE](../files/virtualization/cloud_computing2.png "Cloud Computing scope")
 
 ## Cloud offer and service provided 
 
-![CLOUDPROVIDER](./files/virtualization/cloud_provided_managed.png "Cloud Computing provided")
+![CLOUDPROVIDER](../files/virtualization/cloud_provided_managed.png "Cloud Computing provided")
 
 ## Different Cloud deployment
 
-![CLOUDPROVIDER](./files/virtualization/cloud_kind_of.png "Cloud Computing Type")
+![CLOUDPROVIDER](../files/virtualization/cloud_kind_of.png "Cloud Computing Type")
 
 The need to have common Cloud service deployment in both Public and Private Cloud explain the rise of Kubernetes.
 Kubernetes address one crucial risk for companies: lock-in. Having the same deployment infrastructure target, 
@@ -53,7 +53,7 @@ the companies can move from Public to Private Cloud or create Hybrid CLoud.
 
 ### What is Openstack ?
 
-![OpenStackBasic](./files/virtualization/openstack1.png "Openstack basics")
+![OpenStackBasic](../files/virtualization/openstack1.png "Openstack basics")
 
 * Open source software for creating private and public clouds (OVH for example)
 * Compute, storage, and networking
@@ -70,7 +70,7 @@ A dashboard is also available, giving administrators control while empowering th
 
 Beyond standard infrastructure-as-a-service functionality, additional components provide orchestration, fault management and service management amongst other services to ensure high availability of user applications. +
 
-![OpenStackSimplified](./files/virtualization/openstack_archi.png "Openstack simple archi")
+![OpenStackSimplified](../files/virtualization/openstack_archi.png "Openstack simple archi")
 
 ### Openstack Hypervisors
 OpenStack Compute (nova) supports many hypervisors to various degrees, including:
@@ -87,7 +87,7 @@ OpenStack Compute (nova) supports many hypervisors to various degrees, including
 
 Give a better idea of the project size :
 
-![OpenStackFullPicture](./files/virtualization/openstack_detailed_archi.png "Openstack full picture")
+![OpenStackFullPicture](../files/virtualization/openstack_detailed_archi.png "Openstack full picture")
 
 ###Is OpenStack Dead 2020?
 Yes, OpenStack is still alive and well, and it continues to evolve with interesting new features,

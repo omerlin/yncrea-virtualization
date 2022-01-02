@@ -83,7 +83,7 @@ Directing traffic from external clients to the containers within the cloud, whil
 A common solution is to create an **ingress controller**.
 The ingress controller is delegated the responsibility of taking incoming traffic from an external client, and determining to which container the traffic should be directed.
 
-![TRAEFIK](./files/kubernetes/traefik.png "Traefik")
+![TRAEFIK](../files/kubernetes/traefik.png "Traefik")
 
 ### Terminology
 
@@ -181,7 +181,7 @@ spec:
 ```
 
 Routing rules will now be visible on Traefik’s dashboard.
-![TRAEFIKRULE](./files/kubernetes/traefic_admin.png "Traefik rule")
+![TRAEFIKRULE](../files/kubernetes/traefic_admin.png "Traefik rule")
 
 #### Accessing the service
 

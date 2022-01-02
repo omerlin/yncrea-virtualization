@@ -14,7 +14,7 @@ IT managers duties:
 * Hw Cooling and power management
 
 
-![VIRTHW](./files/virtualization/virtualized_server_architecture.png "Virtualized HW")
+![VIRTHW](../files/virtualization/virtualized_server_architecture.png "Virtualized HW")
 
 ## Where are we ?
 
@@ -35,7 +35,7 @@ flexible as VMware, but they set a foundation that would prove worthy down the r
 Around 2005, Advanced Micro Devices (AMD) and Intel created new processor extensions to the x86 architecture.
 These extensions provided hardware assistance for dealing with privileged instructions.
 
-![](./files/virtualization/timeline_virtualization1.png)
+![](../files/virtualization/timeline_virtualization1.png)
 
 Called AMD-V and VT-x by AMD and Intel respectively, these extensions changed the landscape, eventually opening server
 virtualization to new players.
@@ -44,19 +44,19 @@ For more details on Xen and KVM: [Xen and KVM](https://blog.octo.com/presentatio
 
 Even Microsoft eventually got into the game with the release of Hyper-V in 2008. (Archi similar to Xen)
 
-![TIMELINE2](./files/virtualization/timeline_virtualization2.png "Timeline part2")
+![TIMELINE2](../files/virtualization/timeline_virtualization2.png "Timeline part2")
 
 When virtualization essentially became free, or at least accessible without expensive licensing fees,
 new use cases came to light.
 Most notably, Amazon began to use the Xen platform to rent some of its excess computing capacity to thirdparty customers.
 Through their application programming interfaces (APIs), Amazon kicked off the revolution of elastic cloud computing, where the applications could self-provision resources to fit their workloads.
 
-![TIMELINE3](./files/virtualization/timeline_virtualization3.png "Timeline part3")
+![TIMELINE3](../files/virtualization/timeline_virtualization3.png "Timeline part3")
 
 Progressively, open-source hypervisors have matured and become pervasive in cloud computing.
 Technology vendors developing solutions for virtual environments are increasingly required to support all major hypervisors (Xen and KVM)
 
-![TIMELINE4](./files/virtualization/timeline_virtualization4.png "Timeline part4")
+![TIMELINE4](../files/virtualization/timeline_virtualization4.png "Timeline part4")
 
 With this hypervisor parity, innovation became focused on the private/public cloud hardware architectures and the software ecosystems that surround them: storage architectures, softwaredefined networking, intelligent and autonomous orchestration, and
 application APIs. 
@@ -104,7 +104,7 @@ Hypervisors come with Management Software that:
 
 ## Type 1 Hypervisor
 
-![HYPERT1](./files/virtualization/hypervisor_type1.png "Type 1 Hypervisor")
+![HYPERT1](../files/virtualization/hypervisor_type1.png "Type 1 Hypervisor")
 
 !!! info
     Citrix Xen Server (free), 
@@ -113,7 +113,7 @@ Hypervisors come with Management Software that:
 
 ## Type 2 Hypervisor
 
-![HYPERT2](./files/virtualization/hypervisor_type2.png "Type 2 Hypervisor")
+![HYPERT2](../files/virtualization/hypervisor_type2.png "Type 2 Hypervisor")
 
 !!! info
     Microsoft (Microsoft VirtualPC, Microsoft Virtual Server), 
@@ -125,7 +125,7 @@ Hypervisors come with Management Software that:
 
 ## Containers
 
-![CONTAINERS](./files/virtualization/containers_archi.png "Containers architecture")
+![CONTAINERS](../files/virtualization/containers_archi.png "Containers architecture")
 
 !!! info
     Linux-VServer (isolating processes into user spaces) ; 

@@ -18,7 +18,7 @@ Please follow the "Compose and Wordpress" quickstart.
 
 We will deploy this :
 
-![DOKCOMPOSE](./files/virtualization/docker_compose.png "Docker compose")
+![DOKCOMPOSE](../files/virtualization/docker_compose.png "Docker compose")
 
 The project URL is this one : [dockprom](https://github.com/stefanprodan/dockprom)
 

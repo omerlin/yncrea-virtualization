@@ -8,7 +8,7 @@ You need to be on Windows (7+), Linux or MacOS.
 **VT-x/AMD-v virtualization must be enabled in BIOS**
 
 ### check with Windows 10 task manager
-![VTENABLED](./files/other/virtualization_enabled.png "Cloud Computing scope")
+![VTENABLED](../files/other/virtualization_enabled.png "Cloud Computing scope")
 
 !!! Note
     We will need Windows 10 for Wsl2 and Docker Desktop in future sections

@@ -70,7 +70,7 @@ spec:
 ```
 ### Useful commands
 
-![K8SDeployment](./files/kubernetes/k8s_deployment_commands.png "K8S deployment")
+![K8SDeployment](../files/kubernetes/k8s_deployment_commands.png "K8S deployment")
 
 ### `LAB` deployment
 

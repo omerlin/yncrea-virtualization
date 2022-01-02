@@ -2,13 +2,13 @@
 
 ## Virtualbox network configuration
 
-![VBNET](./files/virtualization/virtualbox_network_config.png "Virtualbox network")
+![VBNET](../files/virtualization/virtualbox_network_config.png "Virtualbox network")
 
 Comes from [Virtualbox Network configuration](https://www.virtualbox.org/manual/ch06.html)
 
 ## Configure the NAT network
 
-![VBNATNET](./files/virtualization/NAT_network.png "Virtualbox NAT network")
+![VBNATNET](../files/virtualization/NAT_network.png "Virtualbox NAT network")
 
 
 !!! Note

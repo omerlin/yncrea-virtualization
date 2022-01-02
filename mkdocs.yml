@@ -14,28 +14,28 @@ nav:
   - Home: index.md
 
   - Day#1:
-    - Env - Prerequisites: prerequisites.md
-    - Virtualization - Story and Concepts: story_of_virtualization.md
-    - Env - Windows prerequisites: windows_prerequisites.md
-    - Virtualization - Virtual Box: virtualBox.md
-    - Virtualization - Labs: virtualBoxLabs.md
-    - Virtualization - Docker machine: dockerMachine.md
-    - Docker - Basics: dockerBasics.md
-    - Docker compose: dockerCompose.md
+    - Env - Prerequisites: day1/10_prerequisites.md
+    - Env - Windows WSL2: day1/12_windows_prerequisites.md    
+    - Virtualization - Story and Concepts: day1/15_story_of_virtualization.md
+    - Virtualization - Virtual Box: day1/20_virtualBox.md
+    - Virtualization - Labs: day1/22_virtualBoxLabs.md
+    - Virtualization - Docker machine: day1/30_dockerMachine.md
+    - Docker - Basics: day1/32_dockerBasics.md
+    - Docker compose: day1/34_dockerCompose.md
 
 
   - Day#2:
-    - Day1 - quick summary: day1Summary.md
-    - Cloud - Introduction to Cloud: cloudIntroduction.md
-    - Kubernetes - introduction: kubernetesIntroduction.md
-    - Kubernetes - installation: kubernetesInstallation.md
-    - Kubernetes - basics: kubernetesBasics.md
+    - Day1 - quick summary: day2/day1Summary.md
+    - Cloud - Introduction to Cloud: day2/cloudIntroduction.md
+    - Kubernetes - introduction: day2/kubernetesIntroduction.md
+    - Kubernetes - installation: day2/kubernetesInstallation.md
+    - Kubernetes - basics: day2/kubernetesBasics.md
 
   - Day#3:
-    - Day2 - quick summary: day2Summary.md
-    - Kubernetes - Advanced: kubernetesAdvanced.md
-    - Cloud - Google Cloud Platform: GoogleCloudPlatform.md
-    - Evaluation - Quizz: quizz.md
+    - Day2 - quick summary: day3/day2Summary.md
+    - Kubernetes - Advanced: day3/kubernetesAdvanced.md
+    - Cloud - Google Cloud Platform: day3/GoogleCloudPlatform.md
+    - Evaluation - Quizz: day3/quizz.md
 
   - Cheatsheets:
     - chocolatey: cheatsheets/choco.md

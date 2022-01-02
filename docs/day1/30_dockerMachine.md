@@ -4,17 +4,17 @@
 
 When people say “Docker” they typically mean ==Docker Engine==, the client-server application made up of the Docker daemon, a REST API that specifies interfaces for interacting with the daemon, and a command line interface (CLI) client
 
-![DOKENG](./files/virtualization/docker_engine.png "Docker engine")
+![DOKENG](../files/virtualization/docker_engine.png "Docker engine")
 
 ## Docker machine
 
 ==Docker Machine== is a tool for provisioning and managing your Dockerized hosts (hosts with Docker Engine on them)
 
-![DOKMACH](./files/virtualization/docker_machine.png "Docker machine")
+![DOKMACH](../files/virtualization/docker_machine.png "Docker machine")
 
 The Dockerized hosts themselves can be thought of, and are sometimes referred to as, managed “machines”.
 
-![DOKMAGT](./files/virtualization/docker_managed_machine.png "Docker managed machine")
+![DOKMAGT](../files/virtualization/docker_managed_machine.png "Docker managed machine")
 
 ## Why using Docker Machine ?
 

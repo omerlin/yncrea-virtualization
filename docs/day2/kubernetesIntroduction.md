@@ -20,7 +20,7 @@ so that we can enjoy all the benefits of a truly {==immutable infrastructure==}.
 The general rule of thumb for K8S: **"if your app fits in a container, Kubernetes will deploy it."**
 
 !!! info
-    ![K8SLogo](./files/kubernetes/k8s_logo.png "K8S Logo")
+    ![K8SLogo](../files/kubernetes/k8s_logo.png "K8S Logo")
     By the way, if you’re wondering where the name “Kubernetes” came from, it is a Greek word, 
     meaning **helmsman** or **pilot**. 
     The abbreviation ==K8s== is derived by replacing the eight letters of “ubernete” with the digit 8.
@@ -108,7 +108,7 @@ Each node runs ==pods==, which are made up of ==containers==.
 
 This diagram shows how the parts of a Kubernetes cluster relate to one another:
 
-![K8SArchitecture](./files/kubernetes/kubernetes_architecture.png "K8S Architecture")
+![K8SArchitecture](../files/kubernetes/kubernetes_architecture.png "K8S Architecture")
 
 ### Master components
 These master components comprise a master node:

@@ -12,6 +12,13 @@ Comes from [Virtualbox Network configuration](https://www.virtualbox.org/manual/
 
 
 !!! Note
-    10.0.0.0/8 IP addresses: 10.0.0.0 – 10.255.255.255 are reserved for private networks
+    RFC 1918 - the following IP ranges are reserved for private networks
+
+    - 10.0.0.0/8     – 10.255.255.255 
+    - 172.16.0.0/12  - 172.31.255.255 
+    - 192.168.0.0/16 - 192.168.255.255
+
     They are not routable on global internet
-    To calculate network: https://www.ipaddressguide.com/cidr
+
+
+Here a good online tool to calculate network: https://www.ipaddressguide.com/cidr

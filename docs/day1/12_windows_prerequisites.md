@@ -19,6 +19,7 @@ I let you read around this topic in Microsoft official documentations (and other
     The Linux OS you install do not start a full subsystem (no init nor systemd scheduler)  
     There are workaround of course - but this is something to put in place ( supervisord for instance )  
     But there are plenty cool usages like:
+    
     - configuration tool like **"ansible"** for instance (See later)
     - bash scripting (faster than git-bash)
     - development, compiling, image building (packer)

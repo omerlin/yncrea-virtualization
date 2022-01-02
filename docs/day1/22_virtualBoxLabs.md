@@ -18,6 +18,11 @@ vboxmanage showvminfo worker1
 ```
 Look if VT-x options are activated
 
+!!! Tip
+    For a future use:  
+    Under git-bash or any WSL Linux machine (if virtualbox is added to Environment PATH variable)  
+    ``` VBoxManage.exe showvminfo worker1|grep NIC```
+
 # Labs 1: Using Linux Box with Vagrant
 
 ## Step 1: Start a VM
@@ -33,8 +38,34 @@ You have just to do something like:
 The first command {==vagrant init==} generate a {==Vagrantfile==}
 The second command {==vagrant up==} deploy/instantiate the VM.
 
+!!! Warning
+    The option to get images over network **is consumer network bandwidth**  
+    An alternative is to get the image in a local network  
+    Then add locally the image with the command ```vagrant box add ...```
+
+!!! Note
+    The default machine configuration may use a lot of ressources (memory / CPU ) ... take care.
+
 !!! Note 
-    Vagrant networks options are quite limited on Virtualbox ( Nat and ==intnet== )
+    Vagrant networks options are quite limited on Virtualbox ( Nat and ==intnet== )  
+    To manage a Nat Network with vagrant: [Vagrant virtual networking](https://www.vagrantup.com/docs/providers/virtualbox/networking)
+
+!!! Remark
+    if you have issues with proxy
+
+    ```set http_proxy=http://user:password@host:port
+       set https_proxy=https://user:password@host:port
+       vagrant plugin install vagrant-proxyconf
+    ```
+
+    then
+
+    ```set VAGRANT_HTTP_PROXY=%http_proxy%
+       set VAGRANT_HTTPS_PROXY=%https_proxy%
+       set VAGRANT_NO_PROXY="127.0.0.1"
+       vagrant up
+    ```
+
 
 ## Step 2: access the VM using ssh
 You have several way to access the VM using SSH.
@@ -68,6 +99,13 @@ You have in the TwoBoxes the Vagrant file
 ssh vagrant@127.0.0.1 -p 2200
 ssh vagrant@127.0.0.1 -p 2222
 
-# Labs 3: deploy RancherOS using DockerMachine
+# Integrates all together
 
- 
+We will configure the 3 machines - so they belongs to the same internal network and are conencted using Mobaxterm.
+
+To see the vagrant environments (and clean old one):
+```
+vagrant global-status --prune
+```
+
+Then you can find the "private_key" of each vagrant VMs using a Unix (or Windows) "find" command.

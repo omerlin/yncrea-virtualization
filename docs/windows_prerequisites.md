@@ -1,39 +1,56 @@
 # Windows prerequisites
 
-LF issue ?
+Since Windows 10, we have the possibility to activate a **Windows SubSystem based on Linux** (WSL).  
+
+* **WSL 1** was activated using Hyper-V (The Layer 1 Windows virtualization).   
+* **WSL 2** has arrived and could be more seen as an embedded container using Hyper-V librairies (and is no more an Hyper-V VM).
+  - Hyper-V was also not working on Windows Home edition (which is quite a limitation !)
+
+The idea behind is to have something leaner (lighter) and faster with performance optimization.  
+I let you read around this topic in Microsoft official documentations (and other independent forum - but take care this is kinde jungle here )
+
+
+!!! tip
+    We configure WSL 2 to benefit from Docker Desktop
+    While this is a cool feature and really simplifies a lot development it has some limitations too ... 
+    This is why we will not focus only on it but first work on VirtualBox. 
+
+!!! warning
+    The Linux OS you install do not start a full subsystem (no init nor systemd scheduler)
+    There are workaround of course - but this is something to put in place ( supervisord for instance )
 
 The Wsl2 installation depends on your Windows version.
 
-![WINDOWS10](./plantuml/generated/mindmap.svg "Mindmap")
+## Check your version of windows
 
-
-Another example: 
-
-```plantuml:test1
-A -> B: test1
+```
+winver
 ```
 
-![](./plantuml/generated/test1.svg)
+!!! warning
+    Take care to use official documentations whenever you can because documentations and versions release are moving fast !
+    And you have a lot of "bad" or "obsolete" information 
 
-```plantuml:test2
-A -> B: test2
-```
+## if recent distribution
 
-![](./plantuml/generated/test2.svg)
+Recents means: Windows 10 version 2004 and higher (Build 19041 and higher) or Windows 11
 
+The install is then automatic.  
+[Install on recent Windows 10/11 distribution](https://docs.microsoft.com/en-us/windows/wsl/install)
 
-```plantuml:md-sample-class
-Class01 <|-- Class02
-Class03 *-- Class04
-Class05 o-- Class06
-Class07 .. Class08
-Class09 -- Class10
-```
+## if older version 
+... but not too old.  
+You need at least: Windows 10 version 1909 (Build 18363 and higher)
 
-![](./plantuml/generated/md-sample-class.svg)
+[Install on Windows 10 distribution manually](https://docs.microsoft.com/en-us/windows/wsl/install-manual)
 
-```javascript
-function dummy() {
-  console.log('test')
-}
-```
+## Windows features activation
+
+You can see windows features enabled in settings:
+![windows-features](./files/other/windows-features.png "windows features visualization")
+
+Hyper-V services must be activated:
+![windows-hyperV-services](./files/other/HyperV-Services.png "HyperV-services used by WSL2")
+
+WSL2 is activated:
+![windows-WSL2](./files/other/WSL2-features.png "WSL2 feature is activated")

@@ -17,7 +17,6 @@ nav:
     - Env - Prerequisites: prerequisites.md
     - Virtualization - Story and Concepts: story_of_virtualization.md
     - Env - Windows prerequisites: windows_prerequisites.md
-    - sample: sample.md
     - Virtualization - Virtual Box: virtualBox.md
     - Virtualization - Labs: virtualBoxLabs.md
     - Virtualization - Docker machine: dockerMachine.md

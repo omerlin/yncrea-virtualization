@@ -247,17 +247,24 @@ Several options in front of you:
 
 helloworld.go :
 
-```go
-package main
-import "fmt"
-func main() {
-fmt.Println("Hello, world!")
-}
-```
+    :::go
+    package main
+    import "fmt"
+      func main() {
+      fmt.Println("Hello, world!")
+    }
+
 Build :
 ```
 env GOOS=linux GOARCH=amd64 go build
 ```
+
+!!! important
+    you need to install golang before   
+    ```
+       # on ubuntu
+       sudo apt install golang-go 
+    ```
 
 ### Beginner
 

@@ -79,6 +79,84 @@ The you can inspect it, looking at the {==Networks==} entries
 docker inspect nginx
 ```
 
+* Launch another container
+
+```
+docker run --rm -d --name=alpine alpine
+```
+
+   - check the network
+   - ping the nginx container
+
+To call remotly Nginx:
+
+```
+wget -O- 172.17.0.2
+```
+
+* Test internet access ?
+
+```
+wget -O- wttr.in/Moon
+```
+
+* Try a container with no network interface
+
+```
+docker run --rm -d --name=alpine_none --net=none alpine
+```
+
+Could you check it has no network connectivity ?
+
+* Container with Host network
+
+```
+docker run --rm -d --name=alpine_host --net=host alpine
+```
+
+Could you check it has access to host network ?  
+Why using {==Host netwok==} ?  
+
+  - Typical use case is a Jenkins CI that must access to host network resources ...
+
+Under the docker container:
+
+```
+docker exec -ti alpine_host bash
+{ echo -e 'HTTP/1 200 OK\r\n'; echo "Marvelous !"; } | nc -v -l -p 80
+```
+
+Outside on the Host:
+
+```
+wget -O- localhost
+```
+
+* Isolating docker networks by creating another one
+
+```
+docker network create another_net
+docker run --rm -it --name=alpine_custom --net=another_net alpine
+```
+
+Could you check it's really isolated ?
+
+* Externet access
+
+We clean everything
+
+```
+docker rm -f $(docker ps -qa)
+```
+
+We will use PAT (Port Adress Translation)
+
+```
+docker run -d --name=nginx --publish=80 nginx:alpine
+```
+
+  - What is the port ?  
+  - How do i get it ?  
 
 
 

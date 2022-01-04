@@ -155,6 +155,11 @@ Luckily you can choose the mapping port
 docker run -d --name=nginx --publish=8080:80 nginx:alpine
 ```
 
+### to go further: docker swarm
+
+This Url allows to play with swarm with [play with docker](https://labs.play-with-docker.com/)
+
+TODO: give details here
 
 ## Data Storage
 

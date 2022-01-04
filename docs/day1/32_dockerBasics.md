@@ -105,7 +105,7 @@ docker run --rm -it --name=alpine_host --net=host alpine
 ```
 
 Could you check it has access to host network ?  
-Why using {==Host netwok==} ?  
+Why using {==Host network==} ?  
 
   - Typical use case is a Jenkins CI that must access to host network resources ...
 
@@ -190,8 +190,8 @@ docker run  --rm -ti --volume /home/ubuntu/foo:/foo alpine sh
 Better option, binding mounts using Volumes
 
 ````
-docker run --name foo -ti --volume /foo alpine sh
-docker run --name bar -ti --volumes-from foo alpine sh
+docker run -d --name foo -ti --volume /foo alpine sh
+docker run -d --name bar -ti --volumes-from foo alpine sh
 ````
 
 We can see the volume with these commands :

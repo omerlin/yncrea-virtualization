@@ -37,13 +37,14 @@ You have just to do something like:
   vagrant box add bionic64 file:///c:/Users/omerlin/Downloads/bionic-server-cloudimg-amd64-vagrant.box
   vagrant box list
 ```
-Then
+Then, go to your own directory, for instance %USERPROFILE%/MyApp/vagrant.  
 
 ```
-  vagrant init ubuntu/trusty64
+  cd %USERPROFILE%/MyApp/vagrant
+  vagrant init bionic64
   vagrant up
 ```
-The first command {==vagrant init==} generate a {==Vagrantfile==}
+The first command {==vagrant init==} generate a {==Vagrantfile==}  
 The second command {==vagrant up==} deploy/instantiate the VM.
 
 

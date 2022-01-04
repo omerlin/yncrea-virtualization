@@ -39,7 +39,7 @@ CMD nginx -g "daemon off";
 
 There are several network drivers :
 
-* ==bridge==: This is the default non routable network - adress 17.2.17.0.2. Used for standalones application
+* ==bridge==: This is the default non routable network - adress 172.17.0.2. Used for standalones application
 * host : The container is using the host network
 * ==overlay==: Virtual Embedded network added to the host network allowing containers communication (used in Kubernetes)
 * None: Deactivated network
@@ -72,7 +72,7 @@ docker inspect nginx
 * Launch another container
 
 ```
-docker run --rm -d --name=alpine alpine
+docker run --rm -it --name=alpine alpine
 ```
 
    - check the network
@@ -93,7 +93,7 @@ wget -O- wttr.in/Moon
 * Try a container with no network interface
 
 ```
-docker run --rm -d --name=alpine_none --net=none alpine
+docker run --rm -it --name=alpine_none --net=none alpine
 ```
 
 Could you check it has no network connectivity ?
@@ -101,7 +101,7 @@ Could you check it has no network connectivity ?
 * Container with Host network
 
 ```
-docker run --rm -d --name=alpine_host --net=host alpine
+docker run --rm -it --name=alpine_host --net=host alpine
 ```
 
 Could you check it has access to host network ?  
@@ -112,7 +112,7 @@ Why using {==Host netwok==} ?
 Under the docker container:
 
 ```
-docker exec -ti alpine_host bash
+docker run --rm -it --name=alpine_host --net=host alpine
 { echo -e 'HTTP/1 200 OK\r\n'; echo "Marvelous !"; } | nc -v -l -p 80
 ```
 

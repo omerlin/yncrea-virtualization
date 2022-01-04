@@ -29,14 +29,24 @@ Look if VT-x options are activated
 To create a VM using Vagrant you have several options.
 By default, you have Cloud base VM Box available ![](https://app.vagrantup.com/boxes/search "Vagrant Cloud Box search")
 
-By default, vagrant will go to internet to get the Vagrant Boxes.
+By default, vagrant will go to internet to get the Vagrant Boxes.  
+We will first download the box [bionic64](ttps://app.vagrantup.com/hashicorp/boxes/bionic64)... then integrates it locally using **vagrant box**  
+
 You have just to do something like:
 ```bash
+  vagrant box add bionic64 file:///c:/Users/omerlin/Downloads/bionic-server-cloudimg-amd64-vagrant.box
+  vagrant box list
+```
+Then
+
+```
   vagrant init ubuntu/trusty64
   vagrant up
 ```
 The first command {==vagrant init==} generate a {==Vagrantfile==}
 The second command {==vagrant up==} deploy/instantiate the VM.
+
+
 
 !!! Warning
     The option to get images over network **is consumer network bandwidth**  

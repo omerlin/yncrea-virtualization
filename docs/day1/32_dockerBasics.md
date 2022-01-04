@@ -41,25 +41,8 @@ There are several network drivers :
 
 * ==bridge==: This is the default non routable network - adress 17.2.17.0.2. Used for standalones application
 * host : The container is using the host network
-* macvlan: A MAC address is dedicated to the container
 * ==overlay==: Virtual Embedded network added to the host network allowing containers communication (used in Kubernetes)
 * None: Deactivated network
-
-To see the default network, type a command like this one :
-```
-docker run -ti nginx bash -c "hostname -i"
-```
-
-To be able to use the internal network:
-````
-docker run -d -p 8087:80 nginx
-````
-
-Otherwise, with a host network:
-````
-docker run -d --net=host nginx
-````
-We will not enter in deep on complex options ...
 
 ### Docker Network LABS
 
@@ -69,6 +52,13 @@ docker network ls
 ```
 
 * What is the default network ?
+
+One method:
+
+To see the default network, type a command like this one :
+```
+docker run -ti nginx bash -c "hostname -i"
+```
 
 ```
 docker run -d --name=nginx nginx:alpine
@@ -157,7 +147,13 @@ docker run -d --name=nginx --publish=80 nginx:alpine
 
   - What is the port ?  
   - How do i get it ?  
+  - check by calling nginx ...
 
+Luckily you can choose the mapping port
+
+```
+docker run -d --name=nginx --publish=8080:80 nginx:alpine
+```
 
 
 ## Data Storage

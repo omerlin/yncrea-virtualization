@@ -61,6 +61,27 @@ docker run -d --net=host nginx
 ````
 We will not enter in deep on complex options ...
 
+### Docker Network LABS
+
+* List the networks on your machine
+```
+docker network ls
+```
+
+* What is the default network ?
+
+```
+docker run -d --name=nginx nginx:alpine
+```
+The you can inspect it, looking at the {==Networks==} entries
+
+```
+docker inspect nginx
+```
+
+
+
+
 ## Data Storage
 
 ![DOCKERLAYER](../files/virtualization/docker_image_layers.png "Docker image layers")

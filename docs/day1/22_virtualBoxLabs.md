@@ -64,14 +64,16 @@ The second command {==vagrant up==} deploy/instantiate the VM.
 !!! Remark
     if you have issues with proxy
 
-    ```set http_proxy=http://user:password@host:port
+    ```
+       set http_proxy=http://user:password@host:port
        set https_proxy=https://user:password@host:port
        vagrant plugin install vagrant-proxyconf
     ```
 
     then
 
-    ```set VAGRANT_HTTP_PROXY=%http_proxy%
+    ```
+       set VAGRANT_HTTP_PROXY=%http_proxy%
        set VAGRANT_HTTPS_PROXY=%https_proxy%
        set VAGRANT_NO_PROXY="127.0.0.1"
        vagrant up

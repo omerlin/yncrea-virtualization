@@ -63,7 +63,7 @@ docker run -ti nginx bash -c "hostname -i"
 ```
 docker run -d --name=nginx nginx:alpine
 ```
-The you can inspect it, looking at the {==Networks==} entries
+Then you can inspect it, looking at the {==Networks==} entries
 
 ```
 docker inspect nginx

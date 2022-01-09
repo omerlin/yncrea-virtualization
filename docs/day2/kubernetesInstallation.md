@@ -74,15 +74,15 @@ box1   Ready    control-plane,master   55s   v1.20.2+k3s1
 
 !!! important
     The vagrant installation deploy the fixed NAT address on eth0
-    ... but the communication interface is ==eth1== (10.0.3.1/24)
-    so we need to tell to the CNI that the real network is on eth1
+    ... but the communication interface is {==enp0s8==} (198.168.56.1/24)
+    so we need to tell to the CNI that the real network is on this interface
 
 To do this, we have to update the k3s service `/etc/systemd/system/k3s.service`
 and add this :
-```
+```bash
 ExecStart=/usr/local/bin/k3s \
     server \
-    --flannel-iface 'eth1'
+    --flannel-iface 'enp0s8'
 systemctl daemon-reload
 systemctl restart k3s
 ```
@@ -137,9 +137,21 @@ box2   Ready    <none>                 13m   v1.20.2+k3s1   10.0.3.7      <none>
 box1   Ready    control-plane,master   27m   v1.20.2+k3s1   10.0.3.6      <none>        Ubuntu 18.04.3 LTS   4.15.0-58-generic   containerd://1.4.3-k3s1
 ```
 
+#### Cluster validation
+
+{==LABS==}: You have to validate the cluster is working well using [This is how to check Kubernes is really working](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-service/)
+
+
 ## RKE from Rancher
 
-==RKE== is to deploy efficiently a production Kubernetes cluster.
+==RKE== is to deploy efficiently a production Kubernetes cluster.  
+Why RKE ?
+
+Read this [introduction to Rke2](https://docs.rke2.io/)
+
+!!! Tip
+    Do a Virtualbox snapshot between all LABS ... thus you can come back to your snapshot easily.
+    Rigor is really a good thing when talking about integration
 
 ### Installation
 
@@ -152,7 +164,7 @@ Then we have to manage the SSH communication with other nodes
 ```
 ssh-keygen
 ```
-Then we install the d_rsa.pub in the vagrant@worker2;/home/vagrant/.ssh/authorized_keys
+Then we install the ```id_rsa.pub``` public key in the ```vagrant@worker2:/home/vagrant/.ssh/authorized_keys```
 
 !!! note
     Normally all these operations are done automatically with an automation tool like `ansible`
@@ -160,7 +172,8 @@ Then we install the d_rsa.pub in the vagrant@worker2;/home/vagrant/.ssh/authoriz
 
 
 We create the cluster configuration file: cluster.yml
-```
+
+```yaml 
 ssh_key_path: "/home/vagrant/.ssh/id_rsa"
 ssh_cert_path: ""
 ssh_agent_auth: false
@@ -176,16 +189,20 @@ nodes:
     - worker
   user: "vagrant"
 ```
+
 !!! tip
     probably it would be better to add the worker1 as a worker too ... to not spoil resources
 
 Then it's almost finished:
+
 ```
 rke up
 ```
+
 This can take a long time if your network is slow ... as it will download ~2Gb of data
 If everything is fine, you need just to configure `kubectl`
-```
+
+```bash
 curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
 cp kubectl /usr/local/bin/kubectl
 sudo chmod +x /usr/local/bin/kubectl
@@ -194,9 +211,10 @@ vagrant@box1:~$ kubectl version
 Client Version: version.Info{Major:"1", Minor:"20", GitVersion:"v1.20.2", GitCommit:"faecb196815e248d3ecfb03c680a4507229c2a56", GitTreeState:"clean", BuildDate:"2021-01-13T13:28:09Z", GoVersion:"go1.15.5", Compiler:"gc", Platform:"linux/amd64"}
 Server Version: version.Info{Major:"1", Minor:"17", GitVersion:"v1.17.17", GitCommit:"f3abc15296f3a3f54e4ee42e830c61047b13895f", GitTreeState:"clean", BuildDate:"2021-01-13T13:13:00Z", GoVersion:"go1.13.15", Compiler:"gc", Platform:"linux/amd64"}
 ```
+
 You are done !
 
-```
+```bash
 vagrant@box1:~$ kubectl get nodes
 NAME       STATUS   ROLES               AGE   VERSION
 10.0.3.6   Ready    controlplane,etcd   29m   v1.17.17
@@ -211,6 +229,7 @@ k3d is a lightweight wrapper to run k3s (Rancher Lab’s minimal Kubernetes dist
 k3d makes it very easy to create single- and multi-node k3s clusters in docker, e.g. for local development on Kubernetes.
 
 We will use {==K3d==} instead of {==minikube==} for several reasons:
+
 * We have docker desktop - so we can benefit from it
 * {==minikube==} is single node and has not the flexibility of {==k3d==} to create many clusters 
 
@@ -226,8 +245,18 @@ Follow this link [to install latest release](https://raw.githubusercontent.com/r
 
 ### K3d usage
 
+```bash
+# one cluster
+k3d cluster create demo --api-port 6550 --servers 1 --agents 3 --port 8080:80@loadbalancer --wait
+# another one
+k3d cluster create another --api-port 7550 --servers 1 --agents 1 --port 9080:80@loadbalancer --wait
+```
 
+!!! Tip
+    install the following tools: **kubectx, kubens, k9s**
 
+### Demo
+The best thing is to clone this repository: https://github.com/iwilltry42/k3d-demo
 
 ## Minikube (obsolete)
 

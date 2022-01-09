@@ -89,23 +89,24 @@ vboxmanage hostonlyif create
 vboxmanage list hostonlyifs
 ```
 then  you re-create your vagrant image (or update - but not tested) so to use 
-  :::vagrantfile
-  Vagrant.configure(2) do |config|
-    config.vm.define "controller" do |worker|
-    worker.vm.allow_hosts_modification = true
-    worker.vm.hostname = "controller"
-    worker.vm.box = "bionic64"
-      worker.vm.network "private_network", ip: "192.168.83.10",
-        name: "VirtualBox Host-Only Ethernet Adapter"
-      worker.vm.provision "shell", path: "../scripts/install.sh"
-      worker.vm.provider "virtualbox" do |v|
-        v.name = "controller"
-        v.memory = 1024
-        v.cpus = 1
-      end
-      end
-  end
-  :::
+
+```ruby hl_lines="6 7"
+Vagrant.configure(2) do |config|
+  config.vm.define "controller" do |worker|
+  worker.vm.allow_hosts_modification = true
+  worker.vm.hostname = "controller"
+  worker.vm.box = "bionic64"
+    worker.vm.network "private_network", ip: "192.168.83.10",
+      name: "VirtualBox Host-Only Ethernet Adapter"
+    worker.vm.provision "shell", path: "../scripts/install.sh"
+    worker.vm.provider "virtualbox" do |v|
+      v.name = "controller"
+      v.memory = 1024
+      v.cpus = 1
+    end
+    end
+end
+:::
 
 
 ## Docker

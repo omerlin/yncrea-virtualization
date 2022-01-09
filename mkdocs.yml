@@ -43,6 +43,7 @@ nav:
     - vagrant: cheatsheets/vagrant.md
     - docker: cheatsheets/docker.md
     - kubernetes: cheatsheets/kubernetes.md
+    - WSL2: cheatsheets/wsl2.md
 
 theme:
   language: en

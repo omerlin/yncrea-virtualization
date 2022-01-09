@@ -82,6 +82,8 @@ IdentitiesOnly yes
 One may advantage: you can interract directly with the Host and thus be reachable from WSL 2 VM.  
 As WSL2 VM are very light this is a great advantage.  
 
+![VBHOSTONLY](../files/virtualization/hostonly.png "Virtualbox host only network")
+
 To configure it it's easy. You need a Host network.  
 This can be created with the GUI or :  
 ```
@@ -106,13 +108,14 @@ Vagrant.configure(2) do |config|
     end
     end
 end
-:::
+```
 
 
 ## Docker
 
 ### Basic of Docker & Docker slimming
-Just a reminder of basics
+Just a reminder of basics  
+Reminds also about the docker network labs  
 
 ### `LABS` build and execute a small nodeJS application
 

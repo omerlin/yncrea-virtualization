@@ -2,12 +2,12 @@
 ## Introduction
 
 Kubernetes can be installed in many ways. 
-We will concentrate here on Private Homer Office installation.
-As this is an incredibly changing world, we are testing some tools having in mind following KISS principle even for production ready cluster.  
+We will concentrate here on Private Home Office installation.  
+As this is an **incredibly changing world**, we are testing some tools having in mind following {==KISS==} principle even for production ready cluster.  
 
 | **Method**  | **Scope / Usage** |  Alternative   |
 |-------------|-------------------|----------------|
-| `minikube`  | Dev environment   | [microk8s](https://microk8s.io/) or kubeadm |
+| `minikube`  | Dev environment   | [microk8s](https://microk8s.io/) [k3d](https://k3d.io) or kubeadm |
 | `k3s`       | Edge computing, ARM | microk8s also |
 | `rke`       | Production cluster | [kubeadm](https://kubernetes.io/fr/docs/setup/production-environment/tools/kubeadm/install-kubeadm/) |
  
@@ -204,7 +204,32 @@ NAME       STATUS   ROLES               AGE   VERSION
 ```
 
 
-## Minikube
+## K3d
+
+k3d is a lightweight wrapper to run k3s (Rancher Lab’s minimal Kubernetes distribution) in docker.
+
+k3d makes it very easy to create single- and multi-node k3s clusters in docker, e.g. for local development on Kubernetes.
+
+We will use {==K3d==} instead of {==minikube==} for several reasons:
+* We have docker desktop - so we can benefit from it
+* {==minikube==} is single node and has not the flexibility of {==k3d==} to create many clusters 
+
+### K3d installation
+
+On windows:  
+``` 
+choco install K3d
+```
+
+On Linux like:
+Follow this link [to install latest release](https://raw.githubusercontent.com/rancher/k3d/main/install.sh)
+
+### K3d usage
+
+
+
+
+## Minikube (obsolete)
 
 Installation link: [Minikube installation](https://kubernetes.io/docs/setup/minikube/)
 

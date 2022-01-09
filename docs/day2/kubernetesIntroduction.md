@@ -39,13 +39,17 @@ Kubernetes is a :
 Kubernetes has become {==**the standard**==} for running containerised applications in the cloud, 
 with the main Cloud Providers (AWS, Azure, GCE, IBM and Oracle) now offering managed Kubernetes services.
 
-| Provider    | Kubernetes offer              |
-| :---------- | :---------------------------- |
-| `AWS`       | EKS  |
-| `Azure`     | AKS  |
-| `GCE`       | GKE  |
-| `IBM`       | IBM Cloud Kubernetes Service  |
-| `Oracle`    | OKE  |
+| Provider         | Kubernetes offer              |
+| :--------------- | :---------------------------- |
+| `AWS`            | EKS  |
+| `Azure`          | AKS  |
+| `GCE`            | GKE  |
+| `IBM`            | IBM Cloud Kubernetes Service  |
+| `Oracle`         | OKE  |
+| `Scaleway`       | Kubernetes Kapsule & Kosmos  |
+| `Digital Ocean`  | Kubernetes Kapsule & Kosmos  |
+| (...)            | (...) |
+
 
 Kubernetes simplifies interoperability opening door to `multi-cloud`
 

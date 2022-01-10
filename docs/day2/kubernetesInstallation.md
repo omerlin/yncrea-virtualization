@@ -221,6 +221,14 @@ NAME       STATUS   ROLES               AGE   VERSION
 10.0.3.7   Ready    worker              29m   v1.17.17
 ```
 
+### Clean up agent manually
+
+To repair bad configuration without restoring a snapshot :smile:
+
+```bash
+  sudo /usr/local/bin/k3s-killall.sh
+  sudo /usr/local/bin/k3s-agent-uninstall.sh
+```
 
 ## K3d
 

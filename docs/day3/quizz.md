@@ -10,6 +10,9 @@ This is not difficult (less than what we have seen so far)
 ### Summary
 You install a client Quizz frontend application and then you execute the Quizz
 
+### Sequence Diagram
+![K8SExamDiagActivity](../files/kubernetes/quizzExamDiagAct.png "Quizz Exam Diag Activity")
+
 ### Detail
 The application is in the `quizz` subdirectory of the [Yncrea virtualization labs](https://github.com/omerlin/yncrea-virtualization-labs.git)
 So you need to do a :
@@ -28,6 +31,7 @@ This means you will have to create a `Dockerfile`.
 
 * Then you will publish this container to your own account on http://hub.docker.com
 * Then you create the manifest Yaml file to deploy this container as a pod on your K3S cluster.
+* (**Option**) You can package it as a Helm package
 * Having done this you will need to access the service port to launch a Quizz.
 
 Something like:

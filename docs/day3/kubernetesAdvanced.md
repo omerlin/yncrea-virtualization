@@ -3,7 +3,7 @@
 Ok we will continue with our K3S cluster
 
 ## Kubernetes dashboard
-Just for fun, we will deploy the Kubernetes dashboard
+Just for fun, we will deploy the Kubernetes dashboard  
 This will also introduce some concepts related to security in Kubernetes 
 
 [Official documentation is here](https://rancher.com/docs/k3s/latest/en/installation/kube-dashboard/)

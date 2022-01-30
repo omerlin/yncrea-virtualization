@@ -30,6 +30,7 @@ nav:
     - Kubernetes - introduction: day2/kubernetesIntroduction.md
     - Kubernetes - installation: day2/kubernetesInstallation.md
     - Kubernetes - basics: day2/kubernetesBasics.md
+    - Kubernetes - networking concepts: day2/kubernetesNetwork.md
 
   - Day#3:
     - Day2 - quick summary: day3/day2Summary.md

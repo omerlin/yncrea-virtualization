@@ -64,6 +64,7 @@ This schema shows the Ingress Controler concept:
 ## Service Mesch
 
 Service mesch are the possibility to manage service access by adding high value features like:
+
 * Canary release
 * A/B testing ( exposing 2 differents Web sites to 2 different users group)
 * Rate limiting

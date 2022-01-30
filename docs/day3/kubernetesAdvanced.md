@@ -12,7 +12,8 @@ This will also introduce some concepts related to security in Kubernetes
 ```bash
 GITHUB_URL=https://github.com/kubernetes/dashboard/releases
 VERSION_KUBE_DASHBOARD=$(curl -w '%{url_effective}' -I -L -s -S ${GITHUB_URL}/latest -o /dev/null | sed -e 's|.*/||')
-sudo k3s kubectl create -f https://raw.githubusercontent.com/kubernetes/dashboard/${VERSION_KUBE_DASHBOARD}/aio/deploy/recommended.yaml
+#sudo k3s kubectl create -f https://raw.githubusercontent.com/kubernetes/dashboard/${VERSION_KUBE_DASHBOARD}/aio/deploy/recommended.yaml
+kubectl create -f https://raw.githubusercontent.com/kubernetes/dashboard/${VERSION_KUBE_DASHBOARD}/aio/deploy/recommended.yaml
 ```
 
 ### Deploy service account and role
@@ -46,8 +47,8 @@ subjects:
 ```
 To create the resources :
 ```
-kubectl create -f admin-service-user.yaml admin-user-role.yaml
 kubectl create -f admin-service-user.yaml
+kubectl create -f admin-user-role.yaml
 ```
 This is Ok, but how to see the dashboard ? 
 One solution we have seen so far is to expose the service port with the `NodePort`.
@@ -68,7 +69,7 @@ You need first get the `admin-user` authentication **token** by this command:
 ```
 sudo k3s kubectl -n kubernetes-dashboard describe secret admin-user-token | grep ^token
 ```
-There are standard authentication token as you can see on https://jwt.io/
+There are standard authentication token as you can see on https://jwt.io/  
 You so can see the kubernetes dashboard opening your browser to `https://localhost:31123`
 
 ## Routing service with ingress
@@ -199,8 +200,8 @@ The External-ip here is not routable ... sdo you have to map port at the Virtual
 
 ## `LABS`: Deploying with Traefik
 
-This Lab will deploy other routes on Traefik with another Nginx POD.
-The code is still located here: https://github.com/omerlin/yncrea-virtualization-labs.git
+This Lab will deploy other routes on Traefik with another Nginx POD.  
+The code is still located here: https://github.com/omerlin/yncrea-virtualization-labs.git  
 Go to the sub-directory: kubernetes/ingressing_with_k3s-master
 
 Objectives are to be able to follow the instructions of this tutorial by yourself.

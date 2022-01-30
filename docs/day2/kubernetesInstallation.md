@@ -147,6 +147,50 @@ box1   Ready    control-plane,master   27m   v1.20.2+k3s1   10.0.3.6      <none>
 
 {==LABS==}: You have to validate the cluster is working well using [This is how to check Kubernes is really working](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-service/)
 
+### Clean up agent manually
+
+To repair bad configuration without restoring a snapshot :smile:
+
+```bash
+  sudo /usr/local/bin/k3s-killall.sh
+  sudo /usr/local/bin/k3s-agent-uninstall.sh
+```
+
+## K3d
+
+k3d is a lightweight wrapper to run k3s (Rancher Lab’s minimal Kubernetes distribution) in docker.
+
+k3d makes it very easy to create single- and multi-node k3s clusters in docker, e.g. for local development on Kubernetes.
+
+We will use {==K3d==} instead of {==minikube==} for several reasons:
+
+* We have docker desktop - so we can benefit from it
+* {==minikube==} is single node and has not the flexibility of {==k3d==} to create many clusters 
+
+### K3d installation
+
+On windows:  
+``` 
+choco install K3d
+```
+
+On Linux like:
+Follow this link [to install latest release](https://raw.githubusercontent.com/rancher/k3d/main/install.sh)
+
+### K3d usage
+
+```bash
+# one cluster
+k3d cluster create demo --api-port 6550 --servers 1 --agents 3 --port 8080:80@loadbalancer --wait
+# another one
+k3d cluster create another --api-port 7550 --servers 1 --agents 1 --port 9080:80@loadbalancer --wait
+```
+
+!!! Tip
+    install the following tools: **kubectx, kubens, k9s**
+
+### Demo
+The best thing is to clone this repository: https://github.com/iwilltry42/k3d-demo
 
 ## RKE from Rancher
 
@@ -226,51 +270,6 @@ NAME       STATUS   ROLES               AGE   VERSION
 10.0.3.6   Ready    controlplane,etcd   29m   v1.17.17
 10.0.3.7   Ready    worker              29m   v1.17.17
 ```
-
-### Clean up agent manually
-
-To repair bad configuration without restoring a snapshot :smile:
-
-```bash
-  sudo /usr/local/bin/k3s-killall.sh
-  sudo /usr/local/bin/k3s-agent-uninstall.sh
-```
-
-## K3d
-
-k3d is a lightweight wrapper to run k3s (Rancher Lab’s minimal Kubernetes distribution) in docker.
-
-k3d makes it very easy to create single- and multi-node k3s clusters in docker, e.g. for local development on Kubernetes.
-
-We will use {==K3d==} instead of {==minikube==} for several reasons:
-
-* We have docker desktop - so we can benefit from it
-* {==minikube==} is single node and has not the flexibility of {==k3d==} to create many clusters 
-
-### K3d installation
-
-On windows:  
-``` 
-choco install K3d
-```
-
-On Linux like:
-Follow this link [to install latest release](https://raw.githubusercontent.com/rancher/k3d/main/install.sh)
-
-### K3d usage
-
-```bash
-# one cluster
-k3d cluster create demo --api-port 6550 --servers 1 --agents 3 --port 8080:80@loadbalancer --wait
-# another one
-k3d cluster create another --api-port 7550 --servers 1 --agents 1 --port 9080:80@loadbalancer --wait
-```
-
-!!! Tip
-    install the following tools: **kubectx, kubens, k9s**
-
-### Demo
-The best thing is to clone this repository: https://github.com/iwilltry42/k3d-demo
 
 ## Minikube (obsolete)
 

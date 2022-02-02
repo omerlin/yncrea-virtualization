@@ -1,0 +1,37 @@
+@startuml
+start
+partition "Quizz exam" {
+#PaleTurquoise: Build "cliapp" docker image;
+note right
+Remember to create a SLIM image
+end note
+#SandyBrown: upload image to dockerhub;
+#SandyBrown: Create your manifest file;
+note right
+you need a configmap for the file config.yml
+IMPORTANT: your email xxxx@yncrea.fr is your identifier
+end note
+#PaleTurquoise: Traefik ingress routing;
+note right
+OPTION: +2 points
+end note
+partition "deployment" {
+fork
+#PaleTurquoise: K3d;
+fork again
+#PaleTurquoise: K3s on 2 VMs;
+fork again
+#PaleTurquoise: Docker only; 
+note right
+OPTION: -2 points
+end note
+end fork
+}
+#SandyBrown: Launch the application;
+#SandyBrown: Execute the Quizz;
+note right
+At the end, your data are stored remotely
+end note
+}
+stop
+@enduml

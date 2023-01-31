@@ -30,29 +30,29 @@ To create a VM using Vagrant you have several options.
 By default, you have Cloud base VM Box available ![](https://app.vagrantup.com/boxes/search "Vagrant Cloud Box search")
 
 By default, vagrant will go to internet to get the Vagrant Boxes.  
-We will first download the box [bionic64](ttps://app.vagrantup.com/hashicorp/boxes/bionic64)... then integrates it locally using **vagrant box**  
+It will download the image only one times.  
+Sometime we prefer to work **OFFLINE** for many reasons ( No access, security, network bandwidth ... )  
+
+We will first download the box [bionic64](https://app.vagrantup.com/debian/boxes/buster64)... then integrates it locally using **vagrant box**  
 
 You have just to do something like:
-```bash
-  vagrant box add bionic64 file:///c:/Users/omerlin/Downloads/bionic-server-cloudimg-amd64-vagrant.box
+```powershell
+  vagrant box add buster64 file:///$Env:USERPROFILE/Downloads/
   vagrant box list
 ```
-Then, go to your own directory, for instance %USERPROFILE%/MyApp/vagrant.  
 
-```
-  cd %USERPROFILE%/MyApp/vagrant
-  vagrant init bionic64
+Then, create your own directory, for instance %USERPROFILE%/MyApp/vagrant.  
+
+```powershell
+  cd $Env:USERPROFILE/MyApp/vagrant
+  # This command will create a Vagrantfile
+  vagrant init buster64
   vagrant up
 ```
 The first command {==vagrant init==} generate a {==Vagrantfile==}  
 The second command {==vagrant up==} deploy/instantiate the VM.
 
 
-
-!!! Warning
-    The option to get images over network **is consumer network bandwidth**  
-    An alternative is to get the image in a local network  
-    Then add locally the image with the command ```vagrant box add ...```
 
 !!! Note
     The default machine configuration may use a lot of ressources (memory / CPU ) ... take care.
@@ -84,8 +84,10 @@ The second command {==vagrant up==} deploy/instantiate the VM.
 You have several way to access the VM using SSH.
 The easiest way is by doing a:
 
-```bash
-   vagrant ssh BOX_NAME
+```powershell
+   # this will be "default" if we don't define the name
+   vagrant status
+   vagrant ssh default
 ```
 
 The second way is by finding where the private key is located and then create a config file in your $HOME/.ssh directory.
@@ -109,12 +111,14 @@ You need to start 2 VM, create a Nat Network and check :
 See: https://github.com/omerlin/yncrea-virtualization-labs
 You have in the TwoBoxes the Vagrant file
 
+```
 ssh vagrant@127.0.0.1 -p 2200
 ssh vagrant@127.0.0.1 -p 2222
+```
 
 # Integrates all together
 
-We will configure the 3 machines - so they belongs to the same internal network and are conencted using Mobaxterm.
+We will configure the 3 machines - so they belongs to the same internal network and are connected using Mobaxterm.
 
 To see the vagrant environments (and clean old one):
 ```

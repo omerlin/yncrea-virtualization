@@ -19,7 +19,6 @@ nav:
     - Virtualization - Story and Concepts: day1/15_story_of_virtualization.md
     - Virtualization - Virtual Box: day1/20_virtualBox.md
     - Virtualization - Labs: day1/22_virtualBoxLabs.md
-    - Virtualization - Docker machine: day1/30_dockerMachine.md
     - Docker - Basics: day1/32_dockerBasics.md
     - Docker compose: day1/34_dockerCompose.md
 

@@ -11,17 +11,32 @@ The local deployment could be useful to:
 !!! Important
     These labs will be reused for the future deployment, so don't miss it please !
 
+## Add VBOXManange to your user PATH
+This can be done by changing the "PAth" entry in your environment.  
+This is most probably in `"C:\Program files\Oracle\virtualbox"`  
+
+!!! Trick 
+    To reload env variables in an existing command or Powershell terminal
+    Use:
+    ``` refreshenv.exe```
+
 ## Vboxmanage
 
 ```
 vboxmanage showvminfo worker1
 ```
-Look if VT-x options are activated
+Look if **VT-x** options are activated
 
 !!! Tip
     For a future use:  
     Under git-bash or any WSL Linux machine (if virtualbox is added to Environment PATH variable)  
-    ``` VBoxManage.exe showvminfo worker1|grep NIC```
+    ```bash 
+       VBoxManage.exe showvminfo worker1|grep NIC
+    ```
+
+    ```powershell 
+       vboxmanage showvminfo controller --details| select-string 'Nic 1 rule'
+    ```
 
 # Labs 1: Using Linux Box with Vagrant
 
@@ -33,7 +48,7 @@ By default, vagrant will go to internet to get the Vagrant Boxes.
 It will download the image only one times.  
 Sometime we prefer to work **OFFLINE** for many reasons ( No access, security, network bandwidth ... )  
 
-We will first download the box [bionic64](https://app.vagrantup.com/debian/boxes/buster64)... then integrates it locally using **vagrant box**  
+We will first download the box [buster64 image](https://app.vagrantup.com/debian/boxes/buster64)... then integrates it locally using **vagrant box**  
 
 You have just to do something like:
 ```powershell

@@ -55,3 +55,14 @@ We do recommend also to install git, to clone source on your computer.
 !!! Note
     We advise installing virtualbox manually instead of using chocolatey  
     Url: [Virtualbox download](https://www.virtualbox.org/wiki/Downloads)
+
+## Issues
+### Windows family issue
+
+Links: 
+* [vt-x-enabled-in-bios-but-not-working-in-windows-11](https://answers.microsoft.com/en-us/windows/forum/all/vt-x-enabled-in-bios-but-not-working-in-windows-11/50dfaa81-5485-45a6-b803-9124f553f32e?page=2)
+
+Seems the solution is to: **disable Core isolation in Windows Security**
+
+* To disable core isolation: [vt-x-enabled-in-bios-but-not-working-in-windows-11](https://support.microsoft.com/en-us/windows/options-to-optimize-gaming-performance-in-windows-11-a255f612-2949-4373-a566-ff6f3f474613)
+

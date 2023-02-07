@@ -127,7 +127,8 @@ sudo -i
 #  token comes from worker1(master) file /var/lib/rancher/k3s/server/node-token
 # TAKE THE FULL TOKEN !!!!
 #
-export AUTH_TOKEN=$( cat /var/lib/rancher/k3s/server/node-token)
+scp 10.0.3.6:/var/lib/rancher/k3s/server/node-token /tmp/node-token
+export AUTH_TOKEN=$( cat /tmp/node-token)
 root@box2:~# curl -sfL https://get.k3s.io | K3S_TOKEN=$AUTH_TOKEN K3S_URL=https://10.0.3.6:6443 sh -
 #
 # post-install: TO NOT FORGET

@@ -40,12 +40,13 @@ You can connect using 3 ways:
     **VBoxManage** is the best option - tell me why ? :Like:
    
 !!! Tip
-    To start all the VM from a bash script (mobaXterm for instance)
+    To start all the VM from a bash script (mobaXterm for instance)  
+
     ```bash
-       # bash way to start all the Vms
-       for k in `vboxmanage list vms | cut -d '"' -f 2`; do vboxmanage startvm $k --type headless; done
-       # Same to stop all the Vms cleanly
-       for k in `vboxmanage list runningvms | cut -d '"' -f 2`; do vboxmanage controlvm $k poweroff soft; done
+       # bash way to start all the Vms  
+       for k in `vboxmanage list vms | cut -d '"' -f 2`; do vboxmanage startvm $k --type headless; done  
+       # Same to stop all the Vms cleanly  
+       for k in `vboxmanage list runningvms | cut -d '"' -f 2`; do vboxmanage controlvm $k poweroff soft; done  
       ```
 
 !!! Reminder
@@ -57,6 +58,10 @@ You can connect using 3 ways:
     ```bash
       # bash
       vboxmanage showvminfo controller --details| grep 'NIC 1 Rule'|cut -d ',' -f 4|cut -d '=' -f 2|xargs
+      
+      # all the boxes port
+      for k in `vboxmanage list vms| cut -d '"' -f 2`; do port=$(vboxmanage showvminfo $k --details| grep 'NIC 1 Rule'|cut -d ',' -f 4|cut -d '=' -f 2|xargs); echo "$k -- $port";done
+
     ```
 
 File **~/.ssh/config** to define a SSH alias on Linux.  
@@ -66,7 +71,7 @@ File **~/.ssh/config** to define a SSH alias on Linux.
 cd $(cygpath $USERPROFILE)/MyApp/yncrea-virtualization-labs/vagrant/buster64
 
 # Get private keys and copy them in $HOME/.ssh directory
-for k in `find . -name "private*"`; do t=$( echo $k|cut -d '/' -f 4 ); cp $k ~/.ssh/id_$t; done
+for k in `find . -name "private*"`; do t=$( echo $k|cut -d '/' -f 4 ); cp -f $k ~/.ssh/id_$t; done
 ```
 
 Then you need to configure aliases in the ~/.ssh/config file

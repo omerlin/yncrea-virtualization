@@ -74,15 +74,22 @@ box1   Ready    control-plane,master   55s   v1.20.2+k3s1
 
 !!! important
     The vagrant installation deploy the fixed NAT address on eth0
-    ... but the communication interface is {==enp0s8==} (198.168.56.1/24)
+    ... but the communication interface is {==eth1==} (10.0.3.1/24)
     so we need to tell to the CNI that the real network is on this interface
 
-To do this, we have to update the k3s service `/etc/systemd/system/k3s.service`
-and add this :
+    To do this, we have to update the k3s service `/etc/systemd/system/k3s.service`
+    and add this :
+    
+    ```bash
+    ExecStart=/usr/local/bin/k3s \
+        server \
+        --flannel-iface 'eth1'
+    ```
+
+A script to play this patch:
+
 ```bash
-ExecStart=/usr/local/bin/k3s \
-    server \
-    --flannel-iface 'enp0s8'
+echo "    --flannel-iface 'eth1'">>/etc/systemd/system/k3s.service
 systemctl daemon-reload
 systemctl restart k3s
 ```
@@ -114,13 +121,13 @@ The installation is extremely straightforward
 You need to get the server authentication token (on box1) here: `/var/lib/rancher/k3s/server/node-token`
 
 
-```
+```bash
 sudo -i
 #
 #  token comes from worker1(master) file /var/lib/rancher/k3s/server/node-token
 # TAKE THE FULL TOKEN !!!!
 #
-export AUTH_TOKEN=K1038d9d2e6926949436a6ad38a691746e5b667a0e75ab8cc2f1492
+export AUTH_TOKEN=$( cat /var/lib/rancher/k3s/server/node-token)
 root@box2:~# curl -sfL https://get.k3s.io | K3S_TOKEN=$AUTH_TOKEN K3S_URL=https://10.0.3.6:6443 sh -
 #
 # post-install: TO NOT FORGET
@@ -155,6 +162,32 @@ To repair bad configuration without restoring a snapshot :smile:
   sudo /usr/local/bin/k3s-killall.sh
   sudo /usr/local/bin/k3s-agent-uninstall.sh
 ```
+
+### K8S major Tools installation
+
+#### k9s GUI cli tool
+
+**k9s** is a wonderful cli GUI interface. [k9S url](https://github.com/derailed/k9s)  
+Trying it is adopting it.  
+It makes all operations more easy on the K8S cluster.  
+
+A script to install it.  
+
+```bash
+curl -v -L https://github.com/derailed/k9s/releases/download/v0.27.2/k9s_Linux_amd64.tar.gz -o /tmp/k9s_Linux_amd64.tar.gz
+cd /tmp
+tar -zxvf k9s_Linux_amd64.tar.gz
+sudo cp /tmp/k9s /usr/local/bin
+sudo chmod +x /usr/local/bin/k9s
+mkdir ~/.kube
+# if you want t get it remotly
+# scp 10.0.3.6:/etc/rancher/k3s/k3s.yaml $HOME/.kube/config
+cp /etc/rancher/k3s/k3s.yaml $HOME/.kube/config
+```
+
+!!! Note:
+    If you copy the file to another node, you need to edit the file $HOME/.kube/config  
+    and change the 127.0.0.1 by the master node IP: 10.0.3.6
 
 ## K3d
 

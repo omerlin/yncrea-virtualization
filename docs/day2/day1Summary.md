@@ -27,7 +27,8 @@ Schema:
    * Take a snapshot of the all your boxes
 
 ### Reminder on MobaXterm installation
-    Get the **portable** version, install it and define a location for home directory (in settings/General)
+
+Get the **portable** version, install it and define a location for home directory (in settings/General)
 
 ### Mobaxterm aliases reminder
 You can connect using 3 ways:  

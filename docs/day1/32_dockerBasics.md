@@ -305,7 +305,11 @@ COPY --from=build-env /go/hello/hello /go/bin/hello
 ENTRYPOINT ["/go/bin/hello"]
 ```
 
-* My Dockerfile becomes a CI tool 
+* My Dockerfile becomes **includes a Continuous Integration tool stage** as the build part is included 
 * ... and the size is reduced to the max !
 
 ![DOCKERSLIMMING](../files/virtualization/docker_images_slimming.png "Docker image slimming")
+
+## For fun, ask dockerfile for a Go helloworld to chatGPT
+
+[ChatGPT](https://chat.openai.com/chat)

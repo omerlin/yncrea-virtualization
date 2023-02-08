@@ -47,7 +47,7 @@ You can connect using 3 ways:
        for k in `vboxmanage list vms | cut -d '"' -f 2`; do vboxmanage startvm $k --type headless; done  
        # Same to stop all the Vms cleanly  
        for k in `vboxmanage list runningvms | cut -d '"' -f 2`; do vboxmanage controlvm $k poweroff soft; done  
-      ```
+    ```
 
 !!! Reminder
     ```powershell

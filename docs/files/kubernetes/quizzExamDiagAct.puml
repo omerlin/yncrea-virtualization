@@ -19,11 +19,16 @@ partition "deployment" {
 fork
 #PaleTurquoise: K3d;
 fork again
-#PaleTurquoise: K3s on 2 VMs;
+#PaleGreen: K3s on 2 VMs;
 fork again
-#PaleTurquoise: Docker only; 
+#RosyBrown: Docker Desktop K8S;
 note right
-OPTION: -2 points
+-2 points
+end note
+fork again
+#Thistle: Docker only; 
+note right
+-3 points
 end note
 end fork
 }

@@ -51,4 +51,6 @@ Your container expects the file `config.yml` to be in the directory `/etc/quizz`
 
 ### alternative
 You can simply deploy on Docker as this is a very simple application ...
-... But be aware you loose 3 points doing that ... K3S deployment is the right way to go.
+... But be aware you loose 3 points doing that ...   
+
+**K3S deployment is the right way to go.**

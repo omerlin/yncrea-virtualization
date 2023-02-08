@@ -164,8 +164,11 @@ docker push omerlin/nodeapp:v01
 We will redo a quick labs on it
 Still on worker1, go to the ==yncrea-virtualization-labs== git project
 
-First, you need to get [docker-compose binary](https://github.com/docker/compose/releases)
-You need to add this binary in your /usr/local/bin directory.
+Install docker-compose in your Linux box (worker1 for instance), using:  
+
+```bash
+sudo apt install docker-compose
+```
 
 Now, we will update the small nodejs application, to persist data in a Mysql database.
 

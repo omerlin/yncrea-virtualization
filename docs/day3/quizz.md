@@ -24,11 +24,6 @@ git pull
 You will need to build your own docker Python container locally.
 This means you will have to create a `Dockerfile`.
 
-!!! warning
-    The difficulty here is to find the dependencies
-    If you know python it's quite easy. 
-    You can try to launch the application locally with Python for instance.
-
 * Then you will publish this container to your own account on http://hub.docker.com
 * Then you create the manifest Yaml file to deploy this container as a pod on your K3S cluster.
 * (**Option**) You can package it as a Helm package

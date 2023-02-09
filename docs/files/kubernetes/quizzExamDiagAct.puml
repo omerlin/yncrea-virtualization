@@ -5,6 +5,7 @@ partition "Quizz exam" {
 note right
 Remember to create a SLIM image
 end note
+#RosyBrown: Test your image with docker;
 #SandyBrown: upload image to dockerhub;
 #SandyBrown: Create your manifest file;
 note right

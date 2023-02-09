@@ -14,7 +14,7 @@ You install a client Quizz frontend application and then you execute the Quizz
 ![K8SExamDiagActivity](../files/kubernetes/quizzExamDiagAct.png "Quizz Exam Diag Activity")
 
 ### Detail
-The application is in the `quizz` subdirectory of the [Yncrea virtualization labs](https://github.com/omerlin/yncrea-virtualization-labs.git)
+The application is located in the repository [Go kub quizz](https://github.com/omerlin/gokubquizz.git)  
 So you need to do a :
 
 ```
